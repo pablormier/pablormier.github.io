@@ -84,7 +84,7 @@ Of course we reserved our game for the end of the talk. After the talk and the e
 It took them just a few minutes to discover how to play well and they started a competition to see who score the most points. Our research center also bought some little presents for the winners to give them an extra motivation. It was funny to see them discussing the strategies and how the invaders reacted to their techniques. Some students even managed to surpass the scores we had achieved during the tests. Unfortunately we didn't have a system to record the matches to study the different strategies they developed. After the session, I can say that we were very happy with the final result as we felt that all the work we put into our idea finally paid of. Some students even asked us the URL to keep playing in their houses and show the game to their families.
 
 
-## Unexpectedly becoming mainstream
+## Unexpectedly becoming "mainstream"
 
 One year after this event, while I was on GitHub, I decided to have a look at the game's repository traffic. I was shocked when I observed an unexpected amount of traffic coming from YouTube as we didn't post any video. To my surprise, when I've checked the URL I discovered a 30 min video made by **Siraj Raval** about our game with around 20,000 visits. We didn't expect this at all. In this video, Siraj explains really well and step by step, all the mechanics and the python code we developed, so I recommend you to watch it if you want to learn how we developed it. However, there was 0 mention to the authors, nor the research center (CiTIUS) in which we were working and for which we made this game, so if you watch the video you can have the feeling that it was actually made by him. Here is the video:
 
