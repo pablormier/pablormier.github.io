@@ -1,0 +1,17 @@
+---
+layout: archive
+author_profile: true
+classes: wide
+permalink: /
+---
+
+
+<h1>About me</h1>
+<p>Welcome to my personal web page. I am currently a postdoctoral researcher in Computational Systems Biology at <a href="https://www6.toulouse.inra.fr/toxalim">INRA Toxalim</a> (Toulouse, France), working on computational models to understand and predict the metabolic dysregulation of cancer cells due to mutations in the TP53 gene. </p>
+
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in site.posts limit:3 %}
+    {% include archive-single.html %}
+{% endfor %}

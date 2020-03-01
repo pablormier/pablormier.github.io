@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+/*
+ * Create figures (centered with caption)
+ * Based on:
+ * https://stackoverflow.com/questions/19331362/using-an-image-caption-in-markdown-jekyll
+ * https://stackoverflow.com/questions/255170/markdown-and-image-alignment
+ */
+
+//@extend-elements
+//original selectors
+//*[src*='#center'], img[alt^="figure"], img[alt^="figure"] +em
+%extend_1 {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	float: none!important;
+}
+
+
+*[src*=' &#center'] {
+	@extend %extend_1;
+}
+img[alt^="figure"] {
+	@extend %extend_1;
+	+ em {
+		@extend %extend_1;
+		font-size: 80%;
+		max-width: 80%;
+		text-align: center;
+        margin-top: 0.5em;
+	}
+}
+.post {
+	> p {
+		text-align: justify;
+	}
+	> blockquote {
+		text-align: justify;
+	}
+}
+
+.page > p {
+	text-align: justify;
+}
