@@ -1,0 +1,35 @@
+// Custom styles
+
+.profile {
+  // This ensures the profile image does not exceed a certain size
+  max-width: 250px; // Adjust this value as needed
+  margin: 0 auto; // Centers the profile picture if it's smaller than the available space
+
+  @media (min-width: 800px) {
+    // For screens larger than 800px, you might want to increase the max-width
+    max-width: 250px; // Adjust this value based on your preference
+  }
+
+  @media (min-width: 1280px) {
+    // For screens larger than 1280px, you might keep the same max-width or adjust it
+    max-width: 250px; // Keep consistent or adjust as needed
+  }
+}
+
+// Adjust floating if needed, though the max-width might make large adjustments unnecessary
+.profile.float-right {
+  margin-left: 1rem;
+}
+
+.profile.float-left {
+  margin-right: 1rem;
+}
+
+.clearfix {
+  margin-bottom: 1.25rem;
+}
+
+.social .contact-icons {
+  font-size: 3rem;
+}
+

@@ -1,12 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - pablormier
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - saezlab/corneto
+  - scapeML/scape
+  - MetExplore/dexom
+  - covid19-modeling/pyncov-19
+  - citiususc/hipster
+  - pablormier/yabox
