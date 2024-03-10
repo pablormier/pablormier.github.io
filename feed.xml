@@ -1,893 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://pablormier.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://pablormier.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-03-10T13:59:51+00:00</updated><id>https://pablormier.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">a post with code diff</title><link href="https://pablormier.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://pablormier.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://pablormier.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://pablormier.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://pablormier.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-03-10T14:06:19+00:00</updated><id>https://pablormier.github.io/feed.xml</id><title type="html">blank</title><subtitle>Pablo Rodriguez-Mier personal webpage. </subtitle><entry><title type="html">Smart invaders: Can you beat ‘em?</title><link href="https://pablormier.github.io/2020/03/01/Smart-invaders-can-you-beat-em/" rel="alternate" type="text/html" title="Smart invaders: Can you beat ‘em?"/><published>2020-03-01T00:00:00+00:00</published><updated>2020-03-01T00:00:00+00:00</updated><id>https://pablormier.github.io/2020/03/01/Smart-invaders-can-you-beat-em</id><content type="html" xml:base="https://pablormier.github.io/2020/03/01/Smart-invaders-can-you-beat-em/"><![CDATA[<p>Explaining Artificial Intelligence (AI) in one hour to high school students is a challenging task. The topic is very broad and it usually requires previous knowledge of programming, algorithms and maths. During our time as PhD students at CiTIUS, <a href="https://people.epfl.ch/tomas.teijeiro">Tomás</a> and I were in charge of introducing this topic to some visiting students from <a href="http://www.iesrosalia.net/">IES Rosalia de Castro</a>. Although fully motivated to do it and convinced about the importance of disseminating this kind of topics among young students, we had no idea how to approach the subject. It was after few discussions when we came out with the idea of developing a game to support our talk. We thought that using games could be a good strategy to engage them and motivate them to participate, and if they don’t learn anything from our talk, at least they can have some fun.</p> <p>Since AI is very broad, we decided to focus on a specific topic. We chose <em>Genetic Algorithms</em> as a way to introduce them to heuristic &amp; optimization because they connect really well to concepts that they already know from high school, such as evolution, reproduction, genes, etc. These algorithms have also the advantage that they are relatively simple to understand (at least from a intuitive perspective) and so we could avoid the use of math formulation.</p> <div class="row justify-content-center"> <div class="col-md-8 mt-3 mt-md-0"> <a href="https://citiususc.github.io/citius-invaders/"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/invaders/main-menu-480.webp 480w,/assets/img/invaders/main-menu-800.webp 800w,/assets/img/invaders/main-menu-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/invaders/main-menu.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </a> </div> </div> <div class="caption text-center"> Screenshot of our retro game's main screen "CiTIUS Invaders" </div> <h2 id="genetic-algorithms">Genetic algorithms</h2> <p>Before continuing, I would like to add just a brief introduction to genetic algorithms, a type of evolutionary algorithm. I’ve previously talked about an evolutionary based algorithm for optimization in my blog (see <a href="/2017/09/05/a-tutorial-on-differential-evolution-with-python">Differential Evolution</a>). Genetic algorithms were invented in 1960 by John H. Holland and other collaborators at the University of Michigan. The main idea behind these techniques is that, in a similar way evolution is able to “develop” living organisms that are adapted to survive in a concrete environment, we could use evolution to search a solution to a problem by starting with a random population of individuals encoded by a set of genes (where genes are parameters important for the problem), and make them evolve (by mating, mutating, and allowing the best ones to survive) until they adapt to the problem, that is, they become good solutions.</p> <p>In order to use genetic algorithms you need a few things. First, you need a problem and a way to say if something is a good solution to your problem, that is, any kind of function that returns a number representing how good or bad a solution is. You also need a representation for your solution (numbers, strings..) and operators to reproduce them (interchange parameters of the parents) and mutate them (change parameters randomly). Finally, to make everything work, you need to add evolutionary pressure by making bad solutions die and good solutions survive and reproduce.</p> <p>Genetic algorithms are very powerful methods that are able to optimize those hard functions functions that other techniques based on gradients (such as gradient descent), quasi-newton methods (like L-BFGS) or even other gradient free methods (e.g. Nelder-Mead) fail miserably (since the functions are not derivable, they have many local minima or they are noisy). That’s why Genetic Algorithms work well in problems like neuroevolution (see for example <a href="https://arxiv.org/abs/1712.06567">this work from Uber AI</a> or this other work about <a href="http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf">NEAT</a>).</p> <p>Unfortunately, Genetic Algorithms are out of the scope of this post, but if you are interested in quick and intuitive introduction, I recommend you to watch the series made by <a href="https://www.youtube.com/embed/j9zfeTw-uFCw">“The Coding Train”</a>. For a more formal introduction, you can watch <a href="https://www.youtube.com/watch?v=kHyNqSnzP8Y">this nice introduction</a> from the MIT’s professor Patrick Winston (who sadly passed away in 2019).</p> <h2 id="the-idea">The idea</h2> <p>Inspired by the game <em>Space Invaders</em>, we thought that we could use the same game mechanics in a slightly different way. Unlike in the original game, where the player has to kill all the invaders without being killed, in our game the match starts with a reduced number of invaders. These invaders don’t shoot, they only reproduce, and there is always a minimum of four of them in the game. The player must therefore prevent them from invading everything and becoming a plague. To make things worse, as the game progresses, the speed in which the invaders reproduce also increases.</p> <div class="row justify-content-center"> <div class="col-md-8 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/invaders/space_invaders_1978-480.webp 480w,/assets/img/invaders/space_invaders_1978-800.webp 800w,/assets/img/invaders/space_invaders_1978-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/invaders/space_invaders_1978.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption text-center"> Screenshot of the original "Space Invaders" game developed in 1978 </div> <p>So what this game has to do with Genetic Algorithms? In our game, the invaders have genes (parameters) that represents their properties (or the phenotype). Each gene encode a different property: the speed in the X axis, the speed in the Y axis, probability of inverting movement, size, color in a gray scale… When they reproduce, the genetic information of the selected parents recombines, and new invaders are created merging the properties of their parents. Invaders are also subject to random mutations that can randomly change some properties during the reproduction phase. And what about the natural selection and evolutionary pressure I mentioned before? Well, the evolution pressure is the player killing invaders: usually the big and slow ones are the easiest to kill, and the small and fast ones are harder to kill. So over time those invaders that escape more often from the player will have more chances to survive, reproduce and pass it’s genetic information to the children, making more good invaders.</p> <p>As the invaders evolve against the player, the player strategy evolve against them. <strong>The idea of the game is to see how long is the player able to sustain this equilibrium over time</strong>. However chances are that at some point, they will beat you.</p> <h2 id="the-development">The development</h2> <p>We started to develop a quick and dirty prototype of the idea in Python with the <a href="http://stellarengine.nongnu.org/">SGE Game Engine</a>. After a few days, we had our first version. We tested it and we found that the idea worked really well. However we had a problem: we wanted to do an interactive session with the students during our lesson, and installing and making sure that all their laptops were able to run the game would be a big problem. We needed something easier and more portable to distribute among the students. The last thing we wanted was to spend half the class solving installation problems.</p> <p>Thus, once the idea was well tested, we decided to port the game to Javascript so they could run it in their browsers. For this task we used the amazing <a href="www.phaser.io">Phaser library</a> for developing 2D HTML5 games (looking back, I regret having started with Python, as Phaser was very easy to learn). We also decided to release the code of both the Python and Javascript verions on <a href="https://github.com/citiususc/citius-invaders">GitHub</a> just in case anyone other than our visiting students found it interesting.</p> <p>Our beloved friend <a href="https://github.com/constantino-garcia">Tino</a> (also PhD student at CiTIUS at that time) was also involved in the project by composing the music of the main screen. His song is the icing on the cake!</p> <blockquote> <p>If you want more details about the development of the game and how the genetic algorithm works, at the end of the post you will find a video made by the youtuber Siraj Raval.</p> </blockquote> <h2 id="the-result">The result</h2> <p>After some time learning how to play well our own game, we discovered that the invaders were able to develop smart strategies to beat us! Even changing our strategies didn’t work really well as they were fast to adapt and change also their strategy. To be honest, we had lot of fun exploring how the invaders behave and evolve. Here is a recorded video (at fast speed) where you can see one of the strategies adopted by the invaders against mine:</p> <div class="row justify-content-center"> <div class="col-md-8 mt-3 mt-md-0 d-flex justify-content-center"> <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;"> <iframe src="https://www.youtube.com/embed/ob0b588nq1Q" title="CiTIUS Invaders Gameplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe> </div> </div> </div> <div class="caption text-center"> Gameplay showing how the smart invaders evolve against my strategy. The result is totally unexpected. </div> <p>At the beginning there are a few random invaders with different sizes, intensities and speeds. Some are big, some are small, some are more white. If you pay attention, you will see that my initial strategy is to kill the smallest ones. Why? well, the small invaders are hard to kill, especially if they are fast. If I let them live and I kill the easiest ones, the small ones will reproduce faster and then I’m doomed to fail. So I start killing them going from right to left to confine them in a small region where I can kill them easily. As I kill all the invaders that move to the right, at some point you can see that they stop doing that because is a bad strategy for them: if they scape to the right, I kill them and they don’t survive, so instead they move to the left, top and bottom. After a while they also stopped moving to the bottom because they are usually the first to die. And finally they stopped moving in almost any direction.</p> <p>However, at this moment, the first unexpected thing for me happened (see the video at 0:30s): the big invaders started to appear on top of the small ones, and since this new generation barely moves (as it resulted in a bad survival strategy against me) the big ones started to indirectly “protect” the small ones. As I was not able to kill the small ones that were behind the big invaders, over time only the small ones survived, and so they reproduced more and became smaller and smaller. And then the second unexpected thing happened at 0:56: thanks to random mutations in the population, some of the small invaders re-learned how to move to other directions, but this time way faster! Few of them escaped from my control and then they started to reproduce and to have more small and fast babies in all directions. After a while, the situation got out of hand, and they became a plague.</p> <p>As you can see, both crossover (crossing and recombining genetic information of the parents) and mutations are important: crossover allows to select the best features (like becoming small) and mutations prevent the population to prematurely converge to a suboptimal strategy by introducing diversity. Without mutations, once all the invaders became small and confined, it would be over for them as I could keep killing them without even moving my player.</p> <p>If you have some time and you are curious, give it a try as well! <a href="https://citiususc.github.io/citius-invaders/">here is the link to play</a>.</p> <h2 id="the-testing-day">The testing day</h2> <p>We were quite happy with our game, but still uncertain of how the students would react to it. Being used to explain things to university students or in conferences, I found that doing it for a younger audience was a big challenge, and way more difficult!</p> <p>Anyway, the day came and we showed them our slides with a few videos and examples to make it more entertaining. I have to say that it was a pleasure to have them visiting our research center, they showed much attention and interest. However, during the slides, they were more in the mood of “okey, we have to listen another presentation”, until we made them use some interactive examples in their laptops (if you wonder which ones, we used the <a href="https://rednuht.org/genetic_cars_2/">“Genetic cars”</a> and the <a href="https://rednuht.org/genetic_walkers/">“Genetic Walkers”</a> made some time ago by <a href="https://rednuht.org/">Rafael Matsunaga</a>).</p> <p>Of course we reserved our game for the end of the talk. After the talk and the examples, we told them that now they had to show us if they were smarter than natural selection, and we explained the basic rules of the game. To be honest, I think neither Tomás nor I expected such a good reaction!</p> <div class="row justify-content-center"> <div class="col-md-8 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/invaders/citius-invaders-2016-480.webp 480w,/assets/img/invaders/citius-invaders-2016-800.webp 800w,/assets/img/invaders/citius-invaders-2016-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/invaders/citius-invaders-2016.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption text-center"> Students from IES Rosalia de Castro at CiTIUS trying to beat the artificial intelligence </div> <p>It took them just a few minutes to discover how to play well and they started a competition to see who score the most points. Our research center also bought some little presents for the winners to give them an extra motivation. It was funny to see them discussing the strategies and how the invaders reacted to their techniques. Some students even managed to surpass the scores we had achieved during the tests. Unfortunately we didn’t have a system to record the matches to study the different strategies they developed. After the session, I can say that we were very happy with the final result as we felt that all the work we put into our idea finally paid of. Some students even asked us the URL to keep playing in their houses and show the game to their families.</p> <h2 id="unexpectedly-becoming-mainstream">Unexpectedly becoming “mainstream”</h2> <p>One year after this event, while I was on GitHub, I decided to have a look at the game’s repository traffic. I was shocked when I observed an unexpected amount of traffic coming from YouTube as we didn’t post any video. To my surprise, when I’ve checked the URL I discovered a 30 min video made by <strong>Siraj Raval</strong> about our game with around 20,000 visits. We didn’t expect this at all. In this video, Siraj explains really well and step by step, all the mechanics and the python code we developed, so I recommend you to watch it if you want to learn how we developed it. However, there was 0 mention to the authors, nor the research center (CiTIUS) in which we were working and for which we made this game, so if you watch the video you can have the feeling that it was actually made by him. Here is the video:</p> <div class="row justify-content-center"> <div class="col-md-8 my-3 d-flex justify-content-center"> <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;"> <iframe src="https://www.youtube.com/embed/rGWBo0JGf50" title="Siraj Raval explaining the game" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe> </div> </div> </div> <p>We were a little bit pissed off by the fact that he didn’t clearly show the authorship and didn’t even linked our original GitHub repository (he forked it and changed the README). Anyway, for me the most important thing is that the game ended up being something interesting for a bigger audience and that’s what matters in the end.</p> <p>If you follow the news in the Artificial Intelligence and Machine Learning community, chances are that you probably heard before about Siraj Raval. He began to become famous for the speed at which he was releasing tutorial videos about AI &amp; Machine Learning, using these types of unethical actions to inflate his reputation, making it appear that he was the genius behind all those projects. The issue became problematic after he allegedly partly plagiarized a research paper (The Neural Qubit paper case) and after the fiasco of his machine learning course, which ended up with many people demanding their money back. I personally believe that if he had simply limited himself to doing tutorials, giving credit to the original authors of the works, he could have gone far anyway without all this controversy.</p> <p>After all this controversy blew up, he did a video apologizing for his unethical actuation, and where he quickly mentions all the original creators of the repositories he used. Here is the video:</p> <div class="row justify-content-center"> <div class="col-md-8 my-3 d-flex justify-content-center"> <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;"> <iframe src="https://www.youtube.com/embed/1zZZjaYl4AA" title="Siraj Raval explaining the game" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe> </div> </div> </div> <p>We were a little bit pissed off by the fact that he didn’t clearly show the authorship and didn’t even linked our original GitHub repository (he forked it and changed the README). Anyway, for me the most important thing is that the game ended up being something interesting for a bigger audience and that’s what matters in the end.</p> <p>Judging by the comments and votes of the video, many people are still angry at him and not at all convinced by his apology. Personally, I think he did a lot of things wrong and this was a small attempt to fix this, though perhaps not the best way. I hope he had at least learned one lesson from all this.</p> <p>I didn’t follow closely this case so I don’t know what happened with the ML course. I don’t know if all the people claiming for their money back managed to recover it, but I hope they did.</p> <h2 id="final-words">Final words</h2> <p>I decided to write this post because it was an interesting and fulfilling experience with a funny unexpected twist. I’d just like to finish up this post with some conclusions from all of this:</p> <ol> <li> <p><strong>Participate and promote this kind of activities in research</strong>. I truly believe they are interesting not only for kids but also for researchers. It makes you think about your research or about a specific topic in different ways and is a good opportunity to develop your communication skills. Kids are the best audience for this: they’re tougher, more critical and more honest than adults. In addition, these types of activities can have an impact on their future career decisions.</p> </li> <li> <p><strong>Share your code</strong>, even if you think that it’s not good enough or nobody is going to care. Sharing with people is kind and beautiful, so if you don’t have any valid reason for not releasing your code, just do it. You never know if your work can inspire or help others. And please don’t be ashamed about the quality of your code, be happy for being accomplished something you wanted to do. You should be proud of yourself!</p> </li> <li> <p><strong>Be honest and don’t pretend to be something that you are not</strong>. Even if you don’t care about being an honest person, in the long term this kind of practices don’t pay off, as you saw in the Siraj case. Always give proper recognition to other’s people work.</p> </li> </ol> <p>Finally, I would like to thank my old research center where we did this experience (<a href="https://citius.usc.es/">CiTIUS</a>, University of Santiago de Compostela) for promoting this kind of activities, as well as their researchers who spend their time explaining year after year what they do to the general public with those events. I think that as researchers paid by public fundings, we are also morally obliged to explain to the society what we do and the importance of doing it. It’s easier said than done though, and I haven’t even participated in many events other than this one, but I will try to force myself in the future to divulge more (I hope!).</p> <p>Thanks for reading!</p>]]></content><author><name></name></author><category term="artificial-intelligence"/><summary type="html"><![CDATA[Explaining Artificial Intelligence (AI) in one hour to high school students is a challenging task. The topic is very broad and it usually requires previous knowledge of programming, algorithms and maths. During our time as PhD students at CiTIUS, Tomás and I were in charge of introducing this topic to some visiting students from IES Rosalia de Castro. Although fully motivated to do it and convinced about the importance of disseminating this kind of topics among young students, we had no idea how to approach the subject. It was after few discussions when we came out with the idea of developing a game to support our talk. We thought that using games could be a good strategy to engage them and motivate them to participate, and if they don’t learn anything from our talk, at least they can have some fun.]]></summary></entry><entry><title type="html">A tutorial on Differential Evolution with Python</title><link href="https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python/" rel="alternate" type="text/html" title="A tutorial on Differential Evolution with Python"/><published>2017-09-05T00:00:00+00:00</published><updated>2017-09-05T00:00:00+00:00</updated><id>https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python</id><content type="html" xml:base="https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python/"><![CDATA[<p>I have to admit that I’m a great fan of the Differential Evolution (DE) algorithm. This algorithm, invented by <a href="https://link.springer.com/article/10.1023%2FA%3A1008202821328?LI=true">R. Storn and K. Price</a> in 1997, is a very powerful algorithm for black-box optimization (also called derivative-free optimization). Black-box optimization is about finding the minimum of a function \(f(x): \mathbb{R}^n \rightarrow \mathbb{R}\), where we don’t know its analytical form, and therefore no derivatives can be computed to minimize it (or are hard to approximate). The figure below shows how the DE algorithm approximates the minimum of a function in succesive steps:</p> <center> <div class="l-body"> <img src="/assets/img/de/ackley.gif"/> <div class="caption"> <b>Figure 1.</b> Example of DE iteratively optimizing the 2D <a href="https://www.sfu.ca/~ssurjano/ackley.html">Ackley function</a> (generated using <a href="https://github.com/pablormier/yabox">Yabox</a>) </div> </div> </center> <p>The optimization of black-box functions is very common in real world problems, where the function to be optimized is very complex (and may involve the use of simulators or external software for the computations). For these kind of problems, DE works pretty well, and that’s why it’s very popular for solving problems in many different fields, including Astronomy, Chemistry, Biology, and many more. For example, the European Space Agency (ESA) uses DE to <a href="http://www.esa.int/gsp/ACT/doc/INF/pub/ACT-RPR-INF-2014-(PPSN)CstrsOptJupiterCapture.pdf">design optimal trajectories</a> in order to reach the orbit of a planet using as less fuel as possible. Sounds awesome right? Best of all, the algorithm is very simple to understand and to implement. In this tutorial, we will see how to implement it, how to use it to solve some problems and we will build intuition about how DE works.</p> <h1 id="lets-start">Let’s start!</h1> <p>Before getting into more technical details, let’s get our hands dirty. One thing that fascinates me about DE is not only its power but its simplicity, since it can be implemented in just a few lines. Here is the code for the DE algorithm using the <em>rand/1/bin</em> schema (we will talk about what this means later). It only took me 27 lines of code using Python with Numpy:</p> <script src="https://gist.github.com/pablormier/0caff10a5f76e87857b44f63757729b0.js"></script> <p>This code is completely functional, you can paste it into a python terminal and start playing with it (you need numpy &gt;= 1.7.0). Don’t worry if you don’t understand anything, we will see later what is the meaning of each line in this code. The good thing is that we can start playing with this right now without knowing how this works. The only two mandatory parameters that we need to provide are <strong>fobj</strong> and <strong>bounds</strong>:</p> <ul> <li> <p><strong>fobj</strong>: \(f(x)\) function to optimize. Can be a function defined with a <code class="language-plaintext highlighter-rouge">def</code> or a lambda expression. For example, suppose we want to minimize the function \(f(x)=\sum_i^n x_i^2/n\). If <code class="language-plaintext highlighter-rouge">x</code> is a numpy array, our fobj can be defined as:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fobj</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div> </div> <p>If we define <code class="language-plaintext highlighter-rouge">x</code> as a list, we should define our objective function in this way:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fobj</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+      <span class="n">value</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+  <span class="k">return</span> <span class="n">value</span> <span class="o">/</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div> </div> </li> <li> <p><strong>bounds</strong>: a list with the lower and upper bound for each parameter of the function. For example: \(bounds_x=\) [(-5, 5), (-5, 5), (-5, 5), (-5, 5)] means that each variable \(x_i, i \in [1, 4]\) is bound to the interval [-5, 5].</p> </li> </ul> <p>For example, let’s find the value of x that minimizes the function \(f(x) = x^2\), looking for values of \(x\) between -100 and 100:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">it</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">de</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
----
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
+<span class="p">(</span><span class="nf">array</span><span class="p">([</span> <span class="mf">0.</span><span class="p">]),</span> <span class="nf">array</span><span class="p">([</span> <span class="mf">0.</span><span class="p">]))</span>
+</code></pre></div></div> <p>The first value returned (<code class="language-plaintext highlighter-rouge">array([ 0.]</code>) represents the best value for <code class="language-plaintext highlighter-rouge">x</code> (in this case is just a single number since the function is 1-D), and the value of <code class="language-plaintext highlighter-rouge">f(x)</code> for that <code class="language-plaintext highlighter-rouge">x</code> is returned in the second array (<code class="language-plaintext highlighter-rouge">array([ 0.]</code>).</p> <blockquote> <p>Note: for convenience, I defined the <code class="language-plaintext highlighter-rouge">de</code> function as a generator function that yields the best solution \(x\) and its corresponding value of \(f(x)\) at each iteration. In order to obtain the last solution, we only need to consume the iterator, or convert it to a list and obtain the last value with <code class="language-plaintext highlighter-rouge">list(de(...))[-1]</code></p> </blockquote> <p>Yeah I know, this is too easy. Now, let’s try the same example in a multi-dimensional setting, with the function now defined as \(f(x) = \sum_{i}^n x_i^2 / n\), for n=32 dimensions. This is how it looks like in 2D:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># https://github.com/pablormier/yabox
+# pip install yabox
+</span><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">yabox.problems</span> <span class="kn">import</span> <span class="n">problem</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">problem</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">).</span><span class="nf">plot3d</span><span class="p">()</span>
+</code></pre></div></div> <center> <div class="l-body"> <img src="/assets/img/de/x2.png"/> <div class="caption"> <b>Figure 2.</b> Representation of \(f(x)=\sum x_i^2/n\) </div> </div> </center> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">de</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">32</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
+<span class="p">(</span><span class="nf">array</span><span class="p">([</span> <span class="mf">1.43231366</span><span class="p">,</span>  <span class="mf">4.83555112</span><span class="p">,</span>  <span class="mf">0.29051824</span><span class="p">,</span>  <span class="mf">2.94836318</span><span class="p">,</span>  <span class="mf">2.02918578</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">2.60703144</span><span class="p">,</span>  <span class="mf">0.76783095</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.66057484</span><span class="p">,</span>  <span class="mf">0.42346029</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.36945634</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.01227915</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.38498397</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.76757209</span><span class="p">,</span>  <span class="mf">3.16294878</span><span class="p">,</span>  <span class="mf">5.96335235</span><span class="p">,</span>
+        <span class="mf">3.51911452</span><span class="p">,</span>  <span class="mf">1.24422323</span><span class="p">,</span>  <span class="mf">2.9985505</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.13640705</span><span class="p">,</span>  <span class="mf">0.47221648</span><span class="p">,</span>
+        <span class="mf">0.42467349</span><span class="p">,</span>  <span class="mf">0.26045357</span><span class="p">,</span>  <span class="mf">1.20885682</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.6256121</span> <span class="p">,</span>  <span class="mf">2.21449962</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.23379811</span><span class="p">,</span>  <span class="mf">2.20160374</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1396289</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.72875512</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.46034836</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">5.84519163</span><span class="p">,</span>  <span class="mf">2.66791339</span><span class="p">]),</span> <span class="mf">6.3464570348900136</span><span class="p">)</span>
+</code></pre></div></div> <p>This time the best value for <code class="language-plaintext highlighter-rouge">f(x)</code> was <code class="language-plaintext highlighter-rouge">6.346</code>, we didn’t obtained the optimal solution \(f(0, \dots, 0) = 0\). Why? DE doesn’t guarantee to obtain the global minimum of a function. What it does is to approach the global minimum in successive steps, as shown in Fig. 1. So in general, the more complex the function, the more iterations are needed. This can raise a new question: how does the dimensionality of a function affects the convergence of the algorithm? In general terms, the difficulty of finding the optimal solution increases exponentially with the number of dimensions (parameters). This effect is called “<a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of dimensionality</a>”. For example, suppose we want to find the minimum of a 2D function whose input values are binary. Since they are binary and there are only two possible values for each one, we would need to evaluate in the worst case \(2^2 = 4\) combinations of values: \(f(0,0)\), \(f(0,1)\), \(f(1,0)\) and \(f(1,1)\). But if we have 32 parameters, we would need to evaluate the function for a total of \(2^{32}\) = 4,294,967,296 possible combinations in the worst case (the size of the search space grows exponentially). This makes the problem much much more difficult, and any metaheuristic algorithm like DE would need many more iterations to find a good approximation.</p> <p>Knowing this, let’s run again the algorithm but for 3,000 iterations instead of just 1,000:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">de</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">32</span><span class="p">,</span> <span class="n">its</span><span class="o">=</span><span class="mi">3000</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
+<span class="p">(</span><span class="nf">array</span><span class="p">([</span> <span class="mf">0.00648831</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00093694</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00205017</span><span class="p">,</span>  <span class="mf">0.00136862</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00722833</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.00138284</span><span class="p">,</span>  <span class="mf">0.00323691</span><span class="p">,</span>  <span class="mf">0.0040672</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.0060339</span> <span class="p">,</span>  <span class="mf">0.00631543</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.01132894</span><span class="p">,</span>  <span class="mf">0.00020696</span><span class="p">,</span>  <span class="mf">0.00020962</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00063984</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00877504</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.00227608</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00101973</span><span class="p">,</span>  <span class="mf">0.00087068</span><span class="p">,</span>  <span class="mf">0.00243963</span><span class="p">,</span>  <span class="mf">0.01391991</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.00894368</span><span class="p">,</span>  <span class="mf">0.00035751</span><span class="p">,</span>  <span class="mf">0.00151198</span><span class="p">,</span>  <span class="mf">0.00310393</span><span class="p">,</span>  <span class="mf">0.00219394</span><span class="p">,</span>
+        <span class="mf">0.01290131</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00029911</span><span class="p">,</span>  <span class="mf">0.00343577</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00032941</span><span class="p">,</span>  <span class="mf">0.00021377</span><span class="p">,</span>
+       <span class="o">-</span><span class="mf">0.01015071</span><span class="p">,</span>  <span class="mf">0.00389961</span><span class="p">]),</span> <span class="mf">3.1645278699373536e-05</span><span class="p">)</span>
+</code></pre></div></div> <p>Now we obtained a much better solution, with a value very close to 0. In this case we only needed a few thousand iterations to obtain a good approximation, but with complex functions we would need much more iterations, and yet the algorithm could get trapped in a local minimum. We can plot the convergence of the algorithm very easily (now is when the implementation using a generator function comes in handy):</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="nf">zip</span><span class="p">(</span><span class="o">*</span><span class="n">result</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div></div> <center> <div class="l-body"> <img src="/assets/img/de/de3000.png"/> <div class="caption"> <b>Figure 3.</b> Evolution of the best solution found by DE in each iteration </div> </div> </center> <p>Fig. 3 shows how the best solution found by the algorithm approximates more and more to the global minimum as more iterations are executed. Now we can represent in a single plot how the complexity of the function affects the number of iterations needed to obtain a good approximation:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">]:</span>
+    <span class="n">it</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">de</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">d</span><span class="p">,</span> <span class="p">[(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span> <span class="n">its</span><span class="o">=</span><span class="mi">3000</span><span class="p">))</span>    
+    <span class="n">x</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="nf">zip</span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">d={}</span><span class="sh">'</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+</code></pre></div></div> <center> <div class="l-body"> <img src="/assets/img/de/comp_de3000.png"/> <div class="caption"> <b>Figure 4.</b> Comparison of the convergence speed for different dimensions </div> </div> </center> <p>The plot makes it clear that when the number of dimensions grows, the number of iterations required by the algorithm to find a good solution grows as well.</p> <h1 id="how-it-works">How it works?</h1> <p>Now it’s time to talk about how these 27 lines of code work. Differential Evolution, as the name suggest, is a type of evolutionary algorithm. An evolutionary algorithm is an algorithm that uses mechanisms inspired by the theory of evolution, where the fittest individuals of a population (the ones that have the traits that allow them to survive longer) are the ones that produce more offspring, which in turn inherit the good traits of the parents. This makes the new generation more likely to survive in the future as well, and so the population improves over time, generation after generation. This is possible thanks to different mechanisms present in nature, such as mutation, recombination and selection, among others. Evolutionary algorithms apply some of these principles to <em>evolve</em> a solution to a problem.</p> <p>In this way, in Differential Evolution, solutions are represented as populations of individuals (or vectors), where each individual is represented by a set of real numbers. These real numbers are the values of the parameters of the function that we want to minimize, and this function <em>measures</em> how good an individual is. The main steps of the algorithm are: initialization of the population, mutation, recombination, replacement and evaluation. Let’s see how these operations are applied working through a simple example of minimizing the function \(f(\mathbf{x})=\sum x_i^2/n\) for \(n=4\), so \(\mathbf{x}=\{x_1, x_2, x_3, x_4\}\), and \(-5 \leq x_i \leq 5\).</p> <h2 id="components">Components</h2> <ul> <li><strong>fobj</strong>: <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fobj</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div> </div> </li> <li><strong>bounds</strong>: <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bounds</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">4</span>
+</code></pre></div> </div> </li> </ul> <h2 id="initialization">Initialization</h2> <p>The first step in every evolutionary algorithm is the creation of a population with <em>popsize</em> individuals. An individual is just an instantiation of the parameters of the function <strong>fobj</strong>. At the beginning, the algorithm initializes the individuals by generating random values for each parameter within the given bounds. For convenience, I generate uniform random numbers between 0 and 1, and then I scale the parameters (denormalization) to obtain the corresponding values. This is done in lines 4-8 of the algorithm.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Population of 10 individuals, 4 params each (popsize = 10, dimensions = 4)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">pop</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">rand</span><span class="p">(</span><span class="n">popsize</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pop</span>
 
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
+<span class="c1">#        x[0]   x[1]   x[2]   x[3]
+</span><span class="nf">array</span><span class="p">([[</span> <span class="mf">0.09</span><span class="p">,</span>  <span class="mf">0.01</span><span class="p">,</span>  <span class="mf">0.4</span> <span class="p">,</span>  <span class="mf">0.21</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.04</span><span class="p">,</span>  <span class="mf">0.87</span><span class="p">,</span>  <span class="mf">0.52</span><span class="p">,</span>  <span class="mf">0.</span>  <span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.96</span><span class="p">,</span>  <span class="mf">0.78</span><span class="p">,</span>  <span class="mf">0.65</span><span class="p">,</span>  <span class="mf">0.17</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.22</span><span class="p">,</span>  <span class="mf">0.83</span><span class="p">,</span>  <span class="mf">0.23</span><span class="p">,</span>  <span class="mf">0.84</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.8</span> <span class="p">,</span>  <span class="mf">0.43</span><span class="p">,</span>  <span class="mf">0.06</span><span class="p">,</span>  <span class="mf">0.44</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.95</span><span class="p">,</span>  <span class="mf">0.99</span><span class="p">,</span>  <span class="mf">0.93</span><span class="p">,</span>  <span class="mf">0.39</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.64</span><span class="p">,</span>  <span class="mf">0.97</span><span class="p">,</span>  <span class="mf">0.82</span><span class="p">,</span>  <span class="mf">0.06</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.41</span><span class="p">,</span>  <span class="mf">0.03</span><span class="p">,</span>  <span class="mf">0.89</span><span class="p">,</span>  <span class="mf">0.24</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.88</span><span class="p">,</span>  <span class="mf">0.29</span><span class="p">,</span>  <span class="mf">0.15</span><span class="p">,</span>  <span class="mf">0.09</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.13</span><span class="p">,</span>  <span class="mf">0.19</span><span class="p">,</span>  <span class="mf">0.17</span><span class="p">,</span>  <span class="mf">0.19</span><span class="p">]])</span>
+</code></pre></div></div> <p>This generates our initial population of 10 random vectors. Each component <code class="language-plaintext highlighter-rouge">x[i]</code> is normalized between [0, 1]. We will use the bounds to denormalize each component only for evaluating them with <strong>fobj</strong>.</p> <h2 id="evaluation">Evaluation</h2> <p>The next step is to apply a linear transformation to convert each component from [0, 1] to [min, max]. This is only required to evaluate each vector with the function <strong>fobj</strong>:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pop_denorm</span> <span class="o">=</span> <span class="n">min_b</span> <span class="o">+</span> <span class="n">pop</span> <span class="o">*</span> <span class="n">diff</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">pop_denorm</span>
 
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
+<span class="nf">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">4.06</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.89</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">2.87</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">4.57</span><span class="p">,</span>  <span class="mf">3.69</span><span class="p">,</span>  <span class="mf">0.19</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.95</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">4.58</span><span class="p">,</span>  <span class="mf">2.78</span><span class="p">,</span>  <span class="mf">1.51</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.31</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">2.83</span><span class="p">,</span>  <span class="mf">3.27</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.72</span><span class="p">,</span>  <span class="mf">3.43</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">3.</span>  <span class="p">,</span> <span class="o">-</span><span class="mf">0.68</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.43</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.57</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">4.47</span><span class="p">,</span>  <span class="mf">4.92</span><span class="p">,</span>  <span class="mf">4.27</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.05</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">1.36</span><span class="p">,</span>  <span class="mf">4.74</span><span class="p">,</span>  <span class="mf">3.19</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.37</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">0.89</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.67</span><span class="p">,</span>  <span class="mf">3.85</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.61</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">3.76</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.14</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.53</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.06</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">3.67</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.14</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.34</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.06</span><span class="p">]])</span>
+</code></pre></div></div> <p>At this point we have our initial population of 10 vectors, and now we can evaluate them using our <strong>fobj</strong>. Although these vectors are random points of the function space, some of them are better than others (have a lower \(f(x)\)). Let’s evaluate them:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">pop_denorm</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span>    <span class="nf">print</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="nf">fobj</span><span class="p">(</span><span class="n">ind</span><span class="p">))</span>
 
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
+<span class="p">[</span><span class="o">-</span><span class="mf">4.06</span> <span class="o">-</span><span class="mf">4.89</span> <span class="o">-</span><span class="mf">1.</span>   <span class="o">-</span><span class="mf">2.87</span><span class="p">]</span> <span class="mf">12.3984504837</span>
+<span class="p">[</span><span class="o">-</span><span class="mf">4.57</span>  <span class="mf">3.69</span>  <span class="mf">0.19</span> <span class="o">-</span><span class="mf">4.95</span><span class="p">]</span> <span class="mf">14.7767132816</span>
+<span class="p">[</span> <span class="mf">4.58</span>  <span class="mf">2.78</span>  <span class="mf">1.51</span> <span class="o">-</span><span class="mf">3.31</span><span class="p">]</span> <span class="mf">10.4889711137</span>
+<span class="p">[</span><span class="o">-</span><span class="mf">2.83</span>  <span class="mf">3.27</span> <span class="o">-</span><span class="mf">2.72</span>  <span class="mf">3.43</span><span class="p">]</span> <span class="mf">9.44800715266</span>
+<span class="p">[</span> <span class="mf">3.</span>   <span class="o">-</span><span class="mf">0.68</span> <span class="o">-</span><span class="mf">4.43</span> <span class="o">-</span><span class="mf">0.57</span><span class="p">]</span> <span class="mf">7.34888318457</span>
+<span class="p">[</span> <span class="mf">4.47</span>  <span class="mf">4.92</span>  <span class="mf">4.27</span> <span class="o">-</span><span class="mf">1.05</span><span class="p">]</span> <span class="mf">15.8691538075</span>
+<span class="p">[</span> <span class="mf">1.36</span>  <span class="mf">4.74</span>  <span class="mf">3.19</span> <span class="o">-</span><span class="mf">4.37</span><span class="p">]</span> <span class="mf">13.4024093959</span>
+<span class="p">[</span><span class="o">-</span><span class="mf">0.89</span> <span class="o">-</span><span class="mf">4.67</span>  <span class="mf">3.85</span> <span class="o">-</span><span class="mf">2.61</span><span class="p">]</span> <span class="mf">11.0571791104</span>
+<span class="p">[</span> <span class="mf">3.76</span> <span class="o">-</span><span class="mf">2.14</span> <span class="o">-</span><span class="mf">3.53</span> <span class="o">-</span><span class="mf">4.06</span><span class="p">]</span> <span class="mf">11.9129095178</span>
+<span class="p">[</span><span class="o">-</span><span class="mf">3.67</span> <span class="o">-</span><span class="mf">3.14</span> <span class="o">-</span><span class="mf">3.34</span> <span class="o">-</span><span class="mf">3.06</span><span class="p">]</span> <span class="mf">10.9544056745</span>
+</code></pre></div></div> <p>After evaluating these random vectors, we can see that the vector <code class="language-plaintext highlighter-rouge">x=[ 3., -0.68, -4.43, -0.57]</code> is the best of the population, with a \(f(x)=7.34\), so these values should be closer to the ones that we’re looking for. The evaluation of this initial population is done in L. 9 and stored in the variable fitness.</p> <h2 id="mutation--recombination">Mutation &amp; Recombination</h2> <p>How can the algorithm find a good solution starting from this set of random values?. This is when the interesting part comes. Now, for each vector <code class="language-plaintext highlighter-rouge">pop[j]</code> in the population (from j=0 to 9), we select three other vectors that are not the current one, let’s call them <em>a</em>, <em>b</em> and <em>c</em>. So we start with the first vector <code class="language-plaintext highlighter-rouge">pop[0] = [-4.06 -4.89 -1. -2.87]</code> (called target vector), and in order to select <em>a</em>, <em>b</em> and <em>c</em>, what I do is first I generate a list with the indexes of the vectors in the population, excluding the current one (j=0) (L. 14):</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">target</span> <span class="o">=</span> <span class="n">pop</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># (j = 0)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">idxs</span> <span class="o">=</span> <span class="p">[</span><span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">popsize</span><span class="p">)</span> <span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="n">j</span><span class="p">]</span> <span class="c1"># (j = 0)
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">idxs</span>
 
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre></div></div> <p>And then I randomly choose 3 indexes without replacement (L. 14-15):</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">selected</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">idxs</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">selected</span>
 
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
+<span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+</code></pre></div></div> <p>Here are our candidates (taken from the normalized population):</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pop</span><span class="p">[</span><span class="n">selected</span><span class="p">]</span>
 
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
+<span class="nf">array</span><span class="p">([[</span> <span class="mf">0.04</span><span class="p">,</span>  <span class="mf">0.87</span><span class="p">,</span>  <span class="mf">0.52</span><span class="p">,</span>  <span class="mf">0.</span>  <span class="p">],</span>  <span class="c1"># a
+</span>       <span class="p">[</span> <span class="mf">0.8</span> <span class="p">,</span>  <span class="mf">0.43</span><span class="p">,</span>  <span class="mf">0.06</span><span class="p">,</span>  <span class="mf">0.44</span><span class="p">],</span>  <span class="c1"># b
+</span>       <span class="p">[</span> <span class="mf">0.41</span><span class="p">,</span>  <span class="mf">0.03</span><span class="p">,</span>  <span class="mf">0.89</span><span class="p">,</span>  <span class="mf">0.24</span><span class="p">]])</span> <span class="c1"># c
+</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">pop</span><span class="p">[</span><span class="n">selected</span><span class="p">]</span>
+</code></pre></div></div> <p>Now, we create a mutant vector by combining <em>a</em>, <em>b</em> and <em>c</em>. How? by computing the <em>difference</em> (now you know why it’s called <em>differential</em> evolution) between <em>b</em> and <em>c</em> and adding those differences to <em>a</em> after multiplying them by a constant called mutation factor (parameter <strong>mut</strong>). A larger mutation factor increases the search radius but may slowdown the convergence of the algorithm. Values for <strong>mut</strong> are usually chosen from the interval [0.5, 2.0]. For this example, we will use the default value of mut = 0.8:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mut = 0.8
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">mutant</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">mut</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span>
 
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
+<span class="nf">array</span><span class="p">([</span> <span class="mf">0.35</span><span class="p">,</span>  <span class="mf">1.19</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.14</span><span class="p">,</span>  <span class="mf">0.17</span><span class="p">])</span>
+</code></pre></div></div> <p>Note that after this operation, we can end up with a vector that is not normalized (the second value is greater than 1 and the third one is smaller than 0). The next step is to fix those situations. There are two common methods: by generating a new random value in the interval [0, 1], or by <em>clipping</em> the number to the interval, so values greater than 1 become 1, and the values smaller than 0 become 0. I chose the second option just because it can be done in one line of code using <code class="language-plaintext highlighter-rouge">numpy.clip</code>:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="p">.</span><span class="nf">clip</span><span class="p">(</span><span class="n">mutant</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-   var hoganTemplates = require('./templates/diff2html-templates.js');
+<span class="nf">array</span><span class="p">([</span> <span class="mf">0.35</span><span class="p">,</span>  <span class="mf">1.</span>  <span class="p">,</span>  <span class="mf">0.</span>  <span class="p">,</span>  <span class="mf">0.17</span><span class="p">])</span>
+</code></pre></div></div> <p>Now that we have our mutant vector, the next step to perform is called recombination. Recombination is about mixing the information of the mutant with the information of the current vector to create a trial vector. This is done by changing the numbers at some positions in the current vector with the ones in the mutant vector. For each position, we decide (with some probability defined by <strong>crossp</strong>) if that number will be replaced or not by the one in the mutant at the same position. To generate the crossover points, we just need to generate uniform random values between [0, 1] and check if the values are less than <strong>crossp</strong>. This method is called <em>binomial crossover</em> since the number of selected locations follows a binomial distribution.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cross_points</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">rand</span><span class="p">(</span><span class="n">dimensions</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">crossp</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cross_points</span>
 
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
+<span class="nf">array</span><span class="p">([</span><span class="bp">False</span><span class="p">,</span>  <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span>  <span class="bp">True</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+</code></pre></div></div> <p>In this case we obtained two Trues at positions 1 and 3, which means that the values at positions 1 and 3 of the current vector will be taken from the mutant. This can be done in one line again using the numpy function <code class="language-plaintext highlighter-rouge">where</code>:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">trial</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="n">cross_points</span><span class="p">,</span> <span class="n">mutant</span><span class="p">,</span> <span class="n">pop</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="c1"># j = 0
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">trial</span>
 
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
+<span class="nf">array</span><span class="p">([</span> <span class="mf">0.09</span><span class="p">,</span>  <span class="mf">1.</span>  <span class="p">,</span>  <span class="mf">0.4</span> <span class="p">,</span>  <span class="mf">0.17</span><span class="p">])</span>
 
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
+</code></pre></div></div> <h2 id="replacement">Replacement</h2> <p>After generating our new trial vector, we need to denormalize it and evaluate it to measure how good it is. If this mutant is better than the current vector (<code class="language-plaintext highlighter-rouge">pop[0]</code>) then we replace it with the new one.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">trial_denorm</span> <span class="o">=</span> <span class="n">min_b</span> <span class="o">+</span> <span class="n">trial</span> <span class="o">*</span> <span class="n">diff</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trial_denorm</span>
 
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
+<span class="nf">array</span><span class="p">([</span><span class="o">-</span><span class="mf">4.1</span><span class="p">,</span>  <span class="mf">5.</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.</span> <span class="p">,</span> <span class="o">-</span><span class="mf">3.3</span><span class="p">])</span>
+</code></pre></div></div> <p>And now, we can evaluate this new vector with <strong>fobj</strong>:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nf">fobj</span><span class="p">(</span><span class="n">mutant_denorm</span><span class="p">)</span>
 
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
+<span class="mf">13.425000000000001</span>
+</code></pre></div></div> <p>In this case, the trial vector is worse than the target vector (13.425 &gt; 12.398), so the target vector is preserved and the trial vector discarded. All these steps have to be repeated again for the remaining individuals (pop[j] for j=1 to j=9), which completes the first iteration of the algorithm. After this process, some of the original vectors of the population will be replaced by better ones, and after many iterations, the whole population will eventually converge towards the solution (it’s a kind of magic uh?).</p> <h1 id="polynomial-curve-fitting-example">Polynomial curve fitting example</h1> <p>Let’s see now the algorithm in action with another concrete example. Given a set of points (x, y), the goal of the curve fitting problem is to find the polynomial that better fits the given points by minimizing for example the sum of the distances between each point and the curve. For this purpose, we are going to generate our set of observations (x, y) using the function \(f(x)=cos(x)\), and adding a small amount of gaussian noise:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">cos(x)</span><span class="sh">'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+</code></pre></div></div> <center> <div class="l-body"> <img src="/assets/img/de/curve.png"/> <div class="caption"> <b>Figure 5.</b> Dataset of 2D points (x, y) generated using the function \(y=cos(x)\) with gaussian noise. </div> </div> </center> <p>Our goal is to fit a curve (defined by a polynomial) to the set of points that we generated before. This curve should be close to the original \(f(x)=cos(x)\) used to generate the points.</p> <p>We would need a polynomial with enough degrees to generate at least 4 curves. For this purpose, a polynomial of degree 5 should be enough (you can try with more/less degrees to see what happens):</p> <p>\[f_{model}(\mathbf{w}, x) = w_0 + w_1 x + w_2 x^2 + w_3 x^3 + w_4 x^4 + w_5 x^5\]</p> <p>This polynomial has 6 parameters \(\mathbf{w}=\{w_1, w_2, w_3, w_4, w_5, w_6\}\). Different values for those parameters generate different curves. Let’s implement it:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fmodel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="n">w</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">5</span>
+</code></pre></div></div> <p>Using this expression, we can generate an infinite set of possible curves. For example:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nf">fmodel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">]))</span>
+</code></pre></div></div> <center> <div class="l-body"> <img src="/assets/img/de/curve-example.png"/> <div class="caption"> <b>Figure 6.</b> Example of a polynomial of degree 5. </div> </div> </center> <p>Among this infinite set of curves, we want the one that better approximates the original function \(f(x)=cos(x)\). For this purpose, we need a function that measures how good a polynomial is. We can use for example the <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">Root Mean Square Error (RMSE)</a> function:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">rmse</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="nf">fmodel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="nf">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</code></pre></div></div> <p>Now we have a clear description of our problem: we need to find the parameters \(\mathbf{w}=\{w_1, w_2, w_3, w_4, w_5, w_6\}\) for our polynomial of degree 5 that minimizes the rmse function. Let’s evolve a population of 20 random polynomials for 2,000 iterations with DE:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">de</span><span class="p">(</span><span class="n">rmse</span><span class="p">,</span> <span class="p">[(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">6</span><span class="p">,</span> <span class="n">its</span><span class="o">=</span><span class="mi">2000</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">result</span>
 
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
+<span class="p">(</span><span class="nf">array</span><span class="p">([</span> <span class="mf">0.99677643</span><span class="p">,</span>  <span class="mf">0.47572443</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.39088333</span><span class="p">,</span>  <span class="mf">0.50950016</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06498931</span><span class="p">,</span>
+         <span class="mf">0.00273167</span><span class="p">]),</span> <span class="mf">0.214860061914732</span><span class="p">)</span>
+</code></pre></div></div> <p>We obtained a solution with a <em>rmse</em> of ~0.215. We can plot this polynomial to see how good our approximation is:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">cos(x)</span><span class="sh">'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nf">fmodel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.99677643</span><span class="p">,</span> <span class="mf">0.47572443</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.39088333</span><span class="p">,</span> 
+<span class="o">&gt;&gt;&gt;</span>                        <span class="mf">0.50950016</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06498931</span><span class="p">,</span> <span class="mf">0.00273167</span><span class="p">]),</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">result</span><span class="sh">'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+</code></pre></div></div> <center> <div class="l-body"> <img src="/assets/img/de/approximation.png"/> <div class="caption"> <b>Figure 7.</b> Approximation of the original function \(f(x)=cos(x)\) used to generate the data points, after 2000 iterations with DE. </div> </div> </center> <p>Not bad at all!. Now let’s see in action how the algorithm evolve the population of random vectors until all of them converge towards the solution. It is very easy to create an animation with matplotlib, using a slight modification of our original DE implementation to yield the entire population after each iteration instead of just the best vector:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Replace this line in DE (L. 29)
+</span><span class="k">yield</span> <span class="n">best</span><span class="p">,</span> <span class="n">fitness</span><span class="p">[</span><span class="n">best_idx</span><span class="p">]</span>
+<span class="c1"># With this line (and call the new version de2)
+</span><span class="k">yield</span> <span class="n">min_b</span> <span class="o">+</span> <span class="n">pop</span> <span class="o">*</span> <span class="n">diff</span><span class="p">,</span> <span class="n">fitness</span><span class="p">,</span> <span class="n">best_idx</span>
+</code></pre></div></div> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">matplotlib.animation</span> <span class="k">as</span> <span class="n">animation</span>
+<span class="kn">from</span> <span class="n">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
+<span class="n">result</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">de2</span><span class="p">(</span><span class="n">rmse</span><span class="p">,</span> <span class="p">[(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">6</span><span class="p">,</span> <span class="n">its</span><span class="o">=</span><span class="mi">2000</span><span class="p">))</span>
 
-@@ -53,6 +53,7 @@
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">()</span>
 
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
-
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
-
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
-
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
-
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
-
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
-
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
-
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
-
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
-
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
-
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
-
----
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
-
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
-
- ## Diff2HtmlUI Helper
-
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
-
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
-
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry><entry><title type="html">a post with advanced image components</title><link href="https://pablormier.github.io/blog/2024/advanced-images/" rel="alternate" type="text/html" title="a post with advanced image components"/><published>2024-01-27T11:46:00+00:00</published><updated>2024-01-27T11:46:00+00:00</updated><id>https://pablormier.github.io/blog/2024/advanced-images</id><content type="html" xml:base="https://pablormier.github.io/blog/2024/advanced-images/"><![CDATA[<p>This is an example post with advanced image components.</p> <h2 id="image-slider">Image Slider</h2> <p>This is a simple image slider. It uses the <a href="https://swiperjs.com/">Swiper</a> library. Check the <a href="https://swiperjs.com/demos">examples page</a> for more information of what you can achieve with it.</p> <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true"> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/9-480.webp 480w,/assets/img/9-800.webp 800w,/assets/img/9-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/9.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/7-480.webp 480w,/assets/img/7-800.webp 800w,/assets/img/7-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/8-480.webp 480w,/assets/img/8-800.webp 800w,/assets/img/8-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/8.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/10-480.webp 480w,/assets/img/10-800.webp 800w,/assets/img/10-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/10.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/12-480.webp 480w,/assets/img/12-800.webp 800w,/assets/img/12-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/12.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> </swiper-container> <h2 id="image-comparison-slider">Image Comparison Slider</h2> <p>This is a simple image comparison slider. It uses the <a href="https://img-comparison-slider.sneas.io/">img-comparison-slider</a> library. Check the <a href="https://img-comparison-slider.sneas.io/examples.html">examples page</a> for more information of what you can achieve with it.</p> <img-comparison-slider> <figure slot="first"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <figure slot="second"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic_color-480.webp 480w,/assets/img/prof_pic_color-800.webp 800w,/assets/img/prof_pic_color-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/prof_pic_color.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </img-comparison-slider>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what advanced image components could look like]]></summary></entry><entry><title type="html">a post with vega lite</title><link href="https://pablormier.github.io/blog/2024/vega-lite/" rel="alternate" type="text/html" title="a post with vega lite"/><published>2024-01-27T00:20:00+00:00</published><updated>2024-01-27T00:20:00+00:00</updated><id>https://pablormier.github.io/blog/2024/vega-lite</id><content type="html" xml:base="https://pablormier.github.io/blog/2024/vega-lite/"><![CDATA[<p>This is an example post with some <a href="https://vega.github.io/vega-lite/">vega lite</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">vega_lite
-</span><span class="sb">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-vega_lite">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}
-</code></pre> <p>This plot supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included vega lite code could look like]]></summary></entry><entry><title type="html">a post with geojson</title><link href="https://pablormier.github.io/blog/2024/geojson-map/" rel="alternate" type="text/html" title="a post with geojson"/><published>2024-01-26T17:57:00+00:00</published><updated>2024-01-26T17:57:00+00:00</updated><id>https://pablormier.github.io/blog/2024/geojson-map</id><content type="html" xml:base="https://pablormier.github.io/blog/2024/geojson-map/"><![CDATA[<p>This is an example post with some <a href="https://geojson.org/">geojson</a> code. The support is provided thanks to <a href="https://leafletjs.com/">Leaflet</a>. To create your own visualization, go to <a href="https://geojson.io/">geojson.io</a>.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">geojson
-</span><span class="sb">{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-geojson">{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><category term="maps"/><summary type="html"><![CDATA[this is what included geojson code could look like]]></summary></entry><entry><title type="html">a post with echarts</title><link href="https://pablormier.github.io/blog/2024/echarts/" rel="alternate" type="text/html" title="a post with echarts"/><published>2024-01-26T16:03:00+00:00</published><updated>2024-01-26T16:03:00+00:00</updated><id>https://pablormier.github.io/blog/2024/echarts</id><content type="html" xml:base="https://pablormier.github.io/blog/2024/echarts/"><![CDATA[<p>This is an example post with some <a href="https://echarts.apache.org/">echarts</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">echarts
-</span><span class="sb">{
-  "title": {
-    "text": "ECharts Getting Started Example"
-  },
-  "responsive": true,
-  "tooltip": {},
-  "legend": {
-    "top": "30px",
-    "data": ["sales"]
-  },
-  "xAxis": {
-    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "name": "sales",
-      "type": "bar",
-      "data": [5, 20, 36, 10, 10, 20]
-    }
-  ]
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-echarts">{
-  "title": {
-    "text": "ECharts Getting Started Example"
-  },
-  "responsive": true,
-  "tooltip": {},
-  "legend": {
-    "top": "30px",
-    "data": ["sales"]
-  },
-  "xAxis": {
-    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "name": "sales",
-      "type": "bar",
-      "data": [5, 20, 36, 10, 10, 20]
-    }
-  ]
-}
-</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry><entry><title type="html">a post with chart.js</title><link href="https://pablormier.github.io/blog/2024/chartjs/" rel="alternate" type="text/html" title="a post with chart.js"/><published>2024-01-26T01:04:00+00:00</published><updated>2024-01-26T01:04:00+00:00</updated><id>https://pablormier.github.io/blog/2024/chartjs</id><content type="html" xml:base="https://pablormier.github.io/blog/2024/chartjs/"><![CDATA[<p>This is an example post with some <a href="https://www.chartjs.org/">chart.js</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
-</span><span class="sb">{
-  "type": "line",
-  "data": {
-    "labels": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July"
-    ],
-    "datasets": [
-      {
-        "label": "# of bugs",
-        "fill": false,
-        "lineTension": 0.1,
-        "backgroundColor": "rgba(75,192,192,0.4)",
-        "borderColor": "rgba(75,192,192,1)",
-        "borderCapStyle": "butt",
-        "borderDash": [],
-        "borderDashOffset": 0,
-        "borderJoinStyle": "miter",
-        "pointBorderColor": "rgba(75,192,192,1)",
-        "pointBackgroundColor": "#fff",
-        "pointBorderWidth": 1,
-        "pointHoverRadius": 5,
-        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
-        "pointHoverBorderColor": "rgba(220,220,220,1)",
-        "pointHoverBorderWidth": 2,
-        "pointRadius": 1,
-        "pointHitRadius": 10,
-        "data": [
-          65,
-          59,
-          80,
-          81,
-          56,
-          55,
-          40
-        ],
-        "spanGaps": false
-      }
-    ]
-  },
-  "options": {}
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-chartjs">{
-  "type": "line",
-  "data": {
-    "labels": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July"
-    ],
-    "datasets": [
-      {
-        "label": "# of bugs",
-        "fill": false,
-        "lineTension": 0.1,
-        "backgroundColor": "rgba(75,192,192,0.4)",
-        "borderColor": "rgba(75,192,192,1)",
-        "borderCapStyle": "butt",
-        "borderDash": [],
-        "borderDashOffset": 0,
-        "borderJoinStyle": "miter",
-        "pointBorderColor": "rgba(75,192,192,1)",
-        "pointBackgroundColor": "#fff",
-        "pointBorderWidth": 1,
-        "pointHoverRadius": 5,
-        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
-        "pointHoverBorderColor": "rgba(220,220,220,1)",
-        "pointHoverBorderWidth": 2,
-        "pointRadius": 1,
-        "pointHitRadius": 10,
-        "data": [
-          65,
-          59,
-          80,
-          81,
-          56,
-          55,
-          40
-        ],
-        "spanGaps": false
-      }
-    ]
-  },
-  "options": {}
-}
-</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
-</span><span class="sb">{
-  "type": "doughnut",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-chartjs">{
-  "type": "doughnut",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included chart.js code could look like]]></summary></entry><entry><title type="html">a post with TikZJax</title><link href="https://pablormier.github.io/blog/2023/tikzjax/" rel="alternate" type="text/html" title="a post with TikZJax"/><published>2023-12-12T22:25:00+00:00</published><updated>2023-12-12T22:25:00+00:00</updated><id>https://pablormier.github.io/blog/2023/tikzjax</id><content type="html" xml:base="https://pablormier.github.io/blog/2023/tikzjax/"><![CDATA[<p>This is an example post with TikZ code. TikZJax converts script tags (containing TikZ code) into SVGs.</p> <script type="text/tikz">
-\begin{tikzpicture}
-    \draw[red,fill=black!60!red] (0,0) circle [radius=1.5];
-    \draw[green,fill=black!60!green] (0,0) circle [x radius=1.5cm, y radius=10mm];
-    \draw[blue,fill=black!60!blue] (0,0) circle [x radius=1cm, y radius=5mm, rotate=30];
-\end{tikzpicture}
-</script>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included TikZ code could look like]]></summary></entry><entry><title type="html">a post with bibliography</title><link href="https://pablormier.github.io/blog/2023/post-bibliography/" rel="alternate" type="text/html" title="a post with bibliography"/><published>2023-07-12T13:56:00+00:00</published><updated>2023-07-12T13:56:00+00:00</updated><id>https://pablormier.github.io/blog/2023/post-bibliography</id><content type="html" xml:base="https://pablormier.github.io/blog/2023/post-bibliography/"><![CDATA[<p>This post shows how to add bibliography to simple blog posts. We support every citation style that <a href="https://github.com/inukshuk/jekyll-scholar">jekyll-scholar</a> does. That means simple citation like <a class="citation" href="#einstein1950meaning">(Einstein &amp; Taub, 1950)</a>, multiple citations like <a class="citation" href="#einstein1950meaning">(Einstein &amp; Taub, 1950; Einstein, 1905)</a>, long references like <span id="einstein1905movement">Einstein, A. (1905). Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat. <i>Ann. Phys.</i>, <i>17</i>, 549–560.</span> or also quotes:</p> <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br/>sed do eiusmod tempor.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p><cite><a class="citation" href="#einstein1905electrodynamics">(Einstein, 1905)</a></cite></blockquote> <p>If you would like something more academic, check the <a href="/blog/2021/distill/">distill style post</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="bib"/><summary type="html"><![CDATA[an example of a blog post with bibliography]]></summary></entry><entry><title type="html">a post with jupyter notebook</title><link href="https://pablormier.github.io/blog/2023/jupyter-notebook/" rel="alternate" type="text/html" title="a post with jupyter notebook"/><published>2023-07-04T12:57:00+00:00</published><updated>2023-07-04T12:57:00+00:00</updated><id>https://pablormier.github.io/blog/2023/jupyter-notebook</id><content type="html" xml:base="https://pablormier.github.io/blog/2023/jupyter-notebook/"><![CDATA[<p>To include a jupyter notebook in a post, you can use the following code:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{::nomarkdown}
-<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">jupyter_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'assets/jupyter/blog.ipynb'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">relative_url</span><span class="w"> </span><span class="cp">%}</span>
-<span class="cp">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">notebook_exists</span><span class="w"> </span><span class="cp">%}{%</span><span class="w"> </span><span class="nt">file_exists</span><span class="w"> </span>assets/jupyter/blog.ipynb<span class="w"> </span><span class="cp">%}{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="cp">%}</span>
-<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">notebook_exists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'true'</span><span class="w"> </span><span class="cp">%}</span>
-  <span class="cp">{%</span><span class="w"> </span><span class="nt">jupyter_notebook</span><span class="w"> </span><span class="nv">jupyter_path</span><span class="w"> </span><span class="cp">%}</span>
-<span class="cp">{%</span><span class="w"> </span><span class="nt">else</span><span class="w"> </span><span class="cp">%}</span>
-  &lt;p&gt;Sorry, the notebook you are looking for does not exist.&lt;/p&gt;
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
-{:/nomarkdown}
-</code></pre></div></div> <p>Let’s break it down: this is possible thanks to <a href="https://github.com/red-data-tools/jekyll-jupyter-notebook">Jekyll Jupyter Notebook plugin</a> that allows you to embed jupyter notebooks in your posts. It basically calls <a href="https://nbconvert.readthedocs.io/en/latest/usage.html#convert-html"><code class="language-plaintext highlighter-rouge">jupyter nbconvert --to html</code></a> to convert the notebook to an html page and then includes it in the post. Since <a href="https://jekyllrb.com/docs/configuration/markdown/">Kramdown</a> is the default Markdown renderer for Jekyll, we need to surround the call to the plugin with the <a href="https://kramdown.gettalong.org/syntax.html#extensions">::nomarkdown</a> tag so that it stops processing this part with Kramdown and outputs the content as-is.</p> <p>The plugin takes as input the path to the notebook, but it assumes the file exists. If you want to check if the file exists before calling the plugin, you can use the <code class="language-plaintext highlighter-rouge">file_exists</code> filter. This avoids getting a 404 error from the plugin and ending up displaying the main page inside of it instead. If the file does not exist, you can output a message to the user. The code displayed above outputs the following:</p> <div class="jupyter-notebook" style="position: relative; width: 100%; margin: 0 auto;"> <div class="jupyter-notebook-iframe-container"> <iframe src="/assets/jupyter/blog.ipynb.html" style="position: absolute; top: 0; left: 0; border-style: none;" width="100%" height="100%" onload="this.parentElement.style.paddingBottom = (this.contentWindow.document.documentElement.scrollHeight + 10) + 'px'"></iframe> </div> </div> <p>Note that the jupyter notebook supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="jupyter"/><summary type="html"><![CDATA[an example of a blog post with jupyter notebook]]></summary></entry><entry><title type="html">a post with custom blockquotes</title><link href="https://pablormier.github.io/blog/2023/custom-blockquotes/" rel="alternate" type="text/html" title="a post with custom blockquotes"/><published>2023-05-12T19:53:00+00:00</published><updated>2023-05-12T19:53:00+00:00</updated><id>https://pablormier.github.io/blog/2023/custom-blockquotes</id><content type="html" xml:base="https://pablormier.github.io/blog/2023/custom-blockquotes/"><![CDATA[<p>This post shows how to add custom styles for blockquotes. Based on <a href="https://github.com/sighingnow/jekyll-gitbook">jekyll-gitbook</a> implementation.</p> <p>We decided to support the same custom blockquotes as in <a href="https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">jekyll-gitbook</a>, which are also found in a lot of other sites’ styles. The styles definitions can be found on the <a href="https://github.com/alshedivat/al-folio/blob/master/_sass/_base.scss">_base.scss</a> file, more specifically:</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Tips, warnings, and dangers */</span>
-<span class="nc">.post</span> <span class="nc">.post-content</span> <span class="nt">blockquote</span> <span class="p">{</span>
-  <span class="k">&amp;</span><span class="nc">.block-tip</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-bg</span><span class="p">);</span>
-
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">h1</span><span class="o">,</span>
-    <span class="nt">h2</span><span class="o">,</span>
-    <span class="nt">h3</span><span class="o">,</span>
-    <span class="nt">h4</span><span class="o">,</span>
-    <span class="nt">h5</span><span class="o">,</span>
-    <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="k">&amp;</span><span class="nc">.block-warning</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-bg</span><span class="p">);</span>
-
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">h1</span><span class="o">,</span>
-    <span class="nt">h2</span><span class="o">,</span>
-    <span class="nt">h3</span><span class="o">,</span>
-    <span class="nt">h4</span><span class="o">,</span>
-    <span class="nt">h5</span><span class="o">,</span>
-    <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="k">&amp;</span><span class="nc">.block-danger</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-bg</span><span class="p">);</span>
-
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">h1</span><span class="o">,</span>
-    <span class="nt">h2</span><span class="o">,</span>
-    <span class="nt">h3</span><span class="o">,</span>
-    <span class="nt">h4</span><span class="o">,</span>
-    <span class="nt">h5</span><span class="o">,</span>
-    <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div> <p>A regular blockquote can be used as following:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; This is a regular blockquote</span>
-<span class="gt">&gt; and it can be used as usual</span>
-</code></pre></div></div> <blockquote> <p>This is a regular blockquote and it can be used as usual</p> </blockquote> <p>These custom styles can be used by adding the specific class to the blockquote, as follows:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### TIP</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; A tip can be used when you want to give advice</span>
-<span class="gt">&gt; related to a certain content.</span>
-{: .block-tip }
-</code></pre></div></div> <blockquote class="block-tip"> <h5 id="tip">TIP</h5> <p>A tip can be used when you want to give advice related to a certain content.</p> </blockquote> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### WARNING</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; This is a warning, and thus should</span>
-<span class="gt">&gt; be used when you want to warn the user</span>
-{: .block-warning }
-</code></pre></div></div> <blockquote class="block-warning"> <h5 id="warning">WARNING</h5> <p>This is a warning, and thus should be used when you want to warn the user</p> </blockquote> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### DANGER</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; This is a danger zone, and thus should</span>
-<span class="gt">&gt; be used carefully</span>
-{: .block-danger }
-</code></pre></div></div> <blockquote class="block-danger"> <h5 id="danger">DANGER</h5> <p>This is a danger zone, and thus should be used carefully</p> </blockquote> ]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="blockquotes"/><summary type="html"><![CDATA[an example of a blog post with custom blockquotes]]></summary></entry></feed>
+<span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">pop</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">pop</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nf">fmodel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ind</span><span class="p">)</span>
+        <span class="n">ax</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</code></pre></div></div> <p>Now we only need to generate the animation:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">anim</span> <span class="o">=</span> <span class="n">animation</span><span class="p">.</span><span class="nc">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">animate</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nc">HTML</span><span class="p">(</span><span class="n">anim</span><span class="p">.</span><span class="nf">to_html5_video</span><span class="p">())</span>
+</code></pre></div></div> <center> <figure> <video src="/assets/img/de/curve-fitting.mp4" class="img-fluid" width="auto" height="auto" autoplay="" loop=""/> </figure> </center> <p>The animation shows how the different vectors in the population (each one corresponding to a different curve) converge towards the solution after a few iterations.</p> <h1 id="de-variations">DE variations</h1> <p>The schema used in this version of the algorithm is called <em>rand/1/bin</em> because the vectors are randomly chosen (<em>rand</em>), we only used <em>1</em> vector difference and the crossover strategy used to mix the information of the trial and the target vectors was a binomial crossover. But there are other variants:</p> <h2 id="mutation-schemas">Mutation schemas</h2> <ul> <li><strong>Rand/1</strong>: \(x_{mut} = x_{r1} + F(x_{r2} - x_{r3})\)</li> <li><strong>Rand/2</strong>: \(x_{mut} = x_{r1} + F(x_{r2} - x_{r3} + x_{r4} - x_{r5})\)</li> <li><strong>Best/1</strong>: \(x_{mut} = x_{best} + F(x_{r2} - x_{r3})\)</li> <li><strong>Best/2</strong>: \(x_{mut} = x_{best} + F(x_{r2} - x_{r3} + x_{r4} - x_{r5})\)</li> <li><strong>Rand-to-best/1</strong>: \(x_{mut} = x_{r1} + F_1(x_{r2} - x_{r3}) + F_2(x_{best} - x_{r1})\)</li> <li>…</li> </ul> <h2 id="crossover-schemas">Crossover schemas</h2> <ul> <li><strong>Binomial (bin)</strong>: crossover due to independent binomial experiments. Each component of the target vector has a probability <em>p</em> of being changed by the component of the the mutant vector.</li> <li><strong>Exponential (exp)</strong>: it’s a two-point crossover operator, where two locations of the vector are randomly chosen so that <em>n</em> consecutive numbers of the vector (between the two locations) are taken from the mutant vector.</li> </ul> <p>Mutation/crossover schemas can be combined to generate different DE variants, such as <em>rand/2/exp</em>, <em>best/1/exp</em>, <em>rand/2/bin</em> and so on. There is no single strategy “to rule them all”. Some schemas work better on some problems and worse in others. The tricky part is choosing the best variant and the best parameters (mutation factor, crossover probability, population size) for the problem we are trying to solve.</p> <h1 id="final-words">Final words</h1> <p>Differential Evolution (DE) is a very simple but powerful algorithm for optimization of complex functions that works pretty well in those problems where other techniques (such as Gradient Descent) cannot be used. In this post, we’ve seen how to implement it in just 27 lines of Python with Numpy, and we’ve seen how the algorithm works step by step.</p> <p>If you are looking for a Python library for black-box optimization that includes the Differential Evolution algorithm, here are some:</p> <ul> <li> <p><a href="https://github.com/pablormier/yabox">Yabox</a>. Yet another black-box optimization library for Python 3+. This is a project I’ve started recently, and it’s the library I’ve used to generate the figures you’ve seen in this post. Yabox is a very lightweight library that depends only on Numpy.</p> </li> <li> <p><a href="http://esa.github.io/pygmo/">Pygmo</a>. A powerful library for numerical optimization, developed and mantained by the ESA. Pygmo is a scientific library providing a large number of optimization problems and algorithms under the same powerful parallelization abstraction built around the generalized island-model paradigm.</p> </li> <li> <p><a href="https://github.com/Project-Platypus/Platypus">Platypus</a>. Platypus is a framework for evolutionary computing in Python with a focus on multiobjective evolutionary algorithms (MOEAs). It differs from existing optimization libraries, including PyGMO, Inspyred, DEAP, and Scipy, by providing optimization algorithms and analysis tools for multiobjective optimization</p> </li> <li> <p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html">Scipy</a>. The well known scientific library for Python includes a fast implementation of the Differential Evolution algorithm.</p> </li> </ul>]]></content><author><name></name></author><category term="python"/><category term="optimization"/><summary type="html"><![CDATA[an example of a blog post with disqus comments]]></summary></entry></feed>
