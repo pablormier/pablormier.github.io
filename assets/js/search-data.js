@@ -53,7 +53,12 @@ ninja.data = [{
             },},{id: "news-i-will-be-attending-the-embo-embl-ai-and-biology-symposium-heidelberg",
           title: 'I will be attending the EMBO-EMBL “AI and Biology” Symposium (Heidelberg)',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "news-presenting-corneto-at-embl-heidelberg",
+          title: 'Presenting CORNETO at EMBL Heidelberg',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/embl-ai-24-post/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
