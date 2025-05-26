@@ -268,7 +268,7 @@ let determineComputedTheme = () => {
   if (themeSetting == "system") {
     const userPref = window.matchMedia;
     if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-      return "dark";
+      return "light"; // here should be dark but https://github.com/alshedivat/al-folio/issues/2963
     } else {
       return "light";
     }
