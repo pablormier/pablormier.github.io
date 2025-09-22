@@ -23,9 +23,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-smart-invaders-amp-58-can-you-beat-39-em",
+        },{id: "post-smart-invaders-can-you-beat-them",
         
-          title: "Smart invaders&amp;#58; Can you beat &#39;em?",
+          title: "Smart Invaders: Can You Beat Them?",
         
         description: "",
         section: "Posts",
