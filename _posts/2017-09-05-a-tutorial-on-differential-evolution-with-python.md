@@ -10,14 +10,18 @@ related_posts: false
 
 I have to admit that I'm a great fan of the Differential Evolution (DE) algorithm. This algorithm, invented by [R. Storn and K. Price](https://link.springer.com/article/10.1023%2FA%3A1008202821328?LI=true) in 1997, is a very powerful algorithm for black-box optimization (also called derivative-free optimization). Black-box optimization is about finding the minimum of a function \\(f(x): \mathbb{R}^n \rightarrow \mathbb{R}\\), where we don't know its analytical form, and therefore no derivatives can be computed to minimize it (or are hard to approximate). The figure below shows how the DE algorithm approximates the minimum of a function in succesive steps:
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/ackley.gif"/>
-   <div class="caption">
-    <b>Figure 1.</b> Example of DE iteratively optimizing the 2D <a href="https://www.sfu.ca/~ssurjano/ackley.html">Ackley function</a> (generated using <a href="https://github.com/pablormier/yabox">Yabox</a>)
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/ackley.gif"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 1.</b> Example of DE iteratively optimizing the 2D <a href="https://www.sfu.ca/~ssurjano/ackley.html">Ackley function</a> (generated using <a href="https://github.com/pablormier/yabox">Yabox</a>)
+</div>
 
 
 
@@ -73,14 +77,18 @@ Yeah I know, this is too easy. Now, let's try the same example in a multi-dimens
 >>> problem(lambda x: sum(x**2)/len(x), bounds=[(-5, 5)] * 2).plot3d()
 ```
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/x2.png"/>
-   <div class="caption">
-    <b>Figure 2.</b> Representation of \(f(x)=\sum x_i^2/n\)
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/x2.png"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 2.</b> Representation of \\(f(x)=\\sum x_i^2/n\\)
+</div>
 
 
 ```python
@@ -123,14 +131,18 @@ Now we obtained a much better solution, with a value very close to 0. In this ca
 >>> plt.plot(f)
 ```
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/de3000.png"/>
-   <div class="caption">
-    <b>Figure 3.</b> Evolution of the best solution found by DE in each iteration
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/de3000.png"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 3.</b> Evolution of the best solution found by DE in each iteration
+</div>
 
 
 Fig. 3 shows how the best solution found by the algorithm approximates more and more to the global minimum as more iterations are executed. Now we can represent in a single plot how the complexity of the function affects the number of iterations needed to obtain a good approximation:
@@ -143,14 +155,18 @@ for d in [8, 16, 32, 64]:
 plt.legend()
 ```
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/comp_de3000.png"/>
-   <div class="caption">
-    <b>Figure 4.</b> Comparison of the convergence speed for different dimensions
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/comp_de3000.png"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 4.</b> Comparison of the convergence speed for different dimensions
+</div>
 
 The plot makes it clear that when the number of dimensions grows, the number of iterations required by the algorithm to find a good solution grows as well. 
 
@@ -341,14 +357,18 @@ Let's see now the algorithm in action with another concrete example. Given a set
 >>> plt.legend()
 ```
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/curve.png"/>
-   <div class="caption">
-    <b>Figure 5.</b> Dataset of 2D points (x, y) generated using the function \(y=cos(x)\) with gaussian noise.
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/curve.png"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 5.</b> Dataset of 2D points (x, y) generated using the function \\(y=cos(x)\\) with gaussian noise.
+</div>
 
 
 Our goal is to fit a curve (defined by a polynomial) to the set of points that we generated before. This curve should be close to the original \\(f(x)=cos(x)\\) used to generate the points. 
@@ -370,14 +390,18 @@ Using this expression, we can generate an infinite set of possible curves. For e
 >>> plt.plot(x, fmodel(x, [1.0, -0.01, 0.01, -0.1, 0.1, -0.01]))
 ```
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/curve-example.png"/>
-   <div class="caption">
-    <b>Figure 6.</b> Example of a polynomial of degree 5.
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/curve-example.png"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 6.</b> Example of a polynomial of degree 5.
+</div>
 
 
 Among this infinite set of curves, we want the one that better approximates the original function \\(f(x)=cos(x)\\). For this purpose, we need a function that measures how good a polynomial is. We can use for example the [Root Mean Square Error (RMSE)](https://en.wikipedia.org/wiki/Root-mean-square_deviation) function:
@@ -410,14 +434,18 @@ We obtained a solution with a _rmse_ of ~0.215. We can plot this polynomial to s
 >>> plt.legend()
 ```
 
-<center>
-<div class="l-body">
-   <img src="{{ site.baseurl }}/assets/img/de/approximation.png"/>
-   <div class="caption">
-    <b>Figure 7.</b> Approximation of the original function \(f(x)=cos(x)\) used to generate the data points, after 2000 iterations with DE.
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12 my-3">
+    {% include figure.liquid
+       loading="lazy"
+       path="assets/img/de/approximation.png"
+       class="img-fluid rounded z-depth-1"
+    %}
   </div>
 </div>
-</center>
+<div class="caption text-center">
+  <b>Figure 7.</b> Approximation of the original function \\(f(x)=cos(x)\\) used to generate the data points, after 2000 iterations with DE.
+</div>
 
 
 Not bad at all!. Now let's see in action how the algorithm evolve the population of random vectors until all of them converge towards the solution. It is very easy to create an animation with matplotlib, using a slight modification of our original DE implementation to yield the entire population after each iteration instead of just the best vector:
@@ -494,6 +522,3 @@ If you are looking for a Python library for black-box optimization that includes
 * [Platypus](https://github.com/Project-Platypus/Platypus). Platypus is a framework for evolutionary computing in Python with a focus on multiobjective evolutionary algorithms (MOEAs). It differs from existing optimization libraries, including PyGMO, Inspyred, DEAP, and Scipy, by providing optimization algorithms and analysis tools for multiobjective optimization
 
 * [Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html). The well known scientific library for Python includes a fast implementation of the Differential Evolution algorithm.
-
-
-
