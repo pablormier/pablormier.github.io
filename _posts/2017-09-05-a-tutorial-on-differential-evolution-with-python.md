@@ -15,7 +15,7 @@ I have to admit that I'm a great fan of the Differential Evolution (DE) algorith
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/ackley.gif"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
@@ -82,7 +82,7 @@ Yeah I know, this is too easy. Now, let's try the same example in a multi-dimens
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/x2.png"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
@@ -136,7 +136,7 @@ Now we obtained a much better solution, with a value very close to 0. In this ca
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/de3000.png"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
@@ -160,7 +160,7 @@ plt.legend()
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/comp_de3000.png"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
@@ -362,7 +362,7 @@ Let's see now the algorithm in action with another concrete example. Given a set
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/curve.png"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
@@ -395,7 +395,7 @@ Using this expression, we can generate an infinite set of possible curves. For e
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/curve-example.png"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
@@ -439,7 +439,7 @@ We obtained a solution with a _rmse_ of ~0.215. We can plot this polynomial to s
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/approximation.png"
-       class="img-fluid rounded z-depth-1"
+       class="img-fluid rounded z-depth-0"
     %}
   </div>
 </div>
