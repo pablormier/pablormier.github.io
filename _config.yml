@@ -4,8 +4,8 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Pablo
-middle_name: R.
-last_name: Mier
+middle_name:
+last_name: Rodriguez-Mier
 #contact_note: >
 #  You can even add a little note about which of these is the best way to reach you.
 #description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -87,8 +87,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: pablo's blog # blog_name will be displayed in your blog page
-blog_description: once every few years, I write something nerdy
+blog_name: blog # blog_name will be displayed in your blog page
+blog_description: once every few years, I write something
 permalink: /:year/:month/:day/:title/
 lsi: false # produce an index for related posts
 
@@ -175,6 +175,7 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
+  - LOCAL_DOCKER_NOTES.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile

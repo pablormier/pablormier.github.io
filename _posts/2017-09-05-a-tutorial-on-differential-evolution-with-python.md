@@ -448,7 +448,7 @@ We obtained a solution with a _rmse_ of ~0.215. We can plot this polynomial to s
 </div>
 
 
-Not bad at all!. Now let's see in action how the algorithm evolve the population of random vectors until all of them converge towards the solution. It is very easy to create an animation with matplotlib, using a slight modification of our original DE implementation to yield the entire population after each iteration instead of just the best vector:
+Not bad at all! Now let's see in action how the algorithm evolve the population of random vectors until all of them converge towards the solution. It is very easy to create an animation with matplotlib, using a slight modification of our original DE implementation to yield the entire population after each iteration instead of just the best vector:
 
 ```python
 # Replace this line in DE (L. 29)
@@ -522,3 +522,5 @@ If you are looking for a Python library for black-box optimization that includes
 * [Platypus](https://github.com/Project-Platypus/Platypus). Platypus is a framework for evolutionary computing in Python with a focus on multiobjective evolutionary algorithms (MOEAs). It differs from existing optimization libraries, including PyGMO, Inspyred, DEAP, and Scipy, by providing optimization algorithms and analysis tools for multiobjective optimization
 
 * [Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html). The well known scientific library for Python includes a fast implementation of the Differential Evolution algorithm.
+.
+n algorithm.
