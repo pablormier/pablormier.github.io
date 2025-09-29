@@ -12,20 +12,22 @@ I have to admit that I'm a great fan of the Differential Evolution (DE) algorith
 
 <div class="row justify-content-center">
   <div class="col-lg-8 col-md-10 col-12 my-3">
-    {% include figure.liquid
-       loading="lazy"
-       path="assets/img/de/ackley.gif"
-       class="img-fluid rounded z-depth-0"
-    %}
+    <img
+      src="{{ '/assets/img/de/ackley.gif' | relative_url }}"
+      alt="DE iteratively optimizing the 2D Ackley function"
+      class="img-fluid rounded z-depth-0 d-block mx-auto"
+      loading="lazy"
+    />
   </div>
 </div>
 <div class="caption text-center">
-  <b>Figure 1.</b> Example of DE iteratively optimizing the 2D <a href="https://www.sfu.ca/~ssurjano/ackley.html">Ackley function</a> (generated using <a href="https://github.com/pablormier/yabox">Yabox</a>)
+  <b>Figure 1.</b> Example of DE iteratively optimizing the 2D
+  <a href="https://www.sfu.ca/~ssurjano/ackley.html">Ackley function</a>
+  (generated using <a href="https://github.com/pablormier/yabox">Yabox</a>)
 </div>
 
 
-
-The optimization of black-box functions is very common in real world problems, where the function to be optimized is very complex (and may involve the use of simulators or external software for the computations). For these kind of problems, DE works pretty well, and that's why it's very popular for solving problems in many different fields, including Astronomy, Chemistry, Biology, and many more. For example, the European Space Agency (ESA) uses DE to [design optimal trajectories](http://www.esa.int/gsp/ACT/doc/INF/pub/ACT-RPR-INF-2014-(PPSN)CstrsOptJupiterCapture.pdf) in order to reach the orbit of a planet using as less fuel as possible. Sounds awesome right? Best of all, the algorithm is very simple to understand and to implement. In this tutorial, we will see how to implement it, how to use it to solve some problems and we will build intuition about how DE works. 
+The optimization of black-box functions is very common in real world problems, where the function to be optimized is very complex (and may involve the use of simulators or external software for the computations). For these kind of problems, DE works pretty well, and that's why it's very popular for solving problems in many different fields, including Astronomy, Chemistry, Biology, and many more. For example, the European Space Agency (ESA) uses DE to [design optimal trajectories](http://www.esa.int/gsp/ACT/doc/INF/pub/ACT-RPR-INF-2014-(PPSN)CstrsOptJupiterCapture.pdf) in order to reach the orbit of a planet using as less fuel as possible. Sounds awesome right? Best of all, the algorithm is very simple to understand and to implement. In this tutorial, we will see how to implement it, how to use it to solve some problems and we will build intuition about how DE works.
 
 
 # Let's start!
@@ -38,7 +40,7 @@ This code is completely functional, you can paste it into a python terminal and 
 The only two mandatory parameters that we need to provide are __fobj__ and __bounds__:
 
 * __fobj__: \\(f(x)\\) function to optimize. Can be a function defined with a `def` or a lambda expression. For example, suppose we want to minimize the function \\(f(x)=\sum_i^n x_i^2/n\\). If `x` is a numpy array, our fobj can be defined as:
-  
+
     ```python
 fobj = lambda x: sum(x**2)/len(x)
     ```
@@ -149,7 +151,7 @@ Fig. 3 shows how the best solution found by the algorithm approximates more and 
 
 ```python
 for d in [8, 16, 32, 64]:
-    it = list(de(lambda x: sum(x**2)/d, [(-100, 100)] * d, its=3000))    
+    it = list(de(lambda x: sum(x**2)/d, [(-100, 100)] * d, its=3000))
     x, f = zip(*it)
     plt.plot(f, label='d={}'.format(d))
 plt.legend()
@@ -168,7 +170,7 @@ plt.legend()
   <b>Figure 4.</b> Comparison of the convergence speed for different dimensions
 </div>
 
-The plot makes it clear that when the number of dimensions grows, the number of iterations required by the algorithm to find a good solution grows as well. 
+The plot makes it clear that when the number of dimensions grows, the number of iterations required by the algorithm to find a good solution grows as well.
 
 # How it works?
 
@@ -178,12 +180,12 @@ In this way, in Differential Evolution, solutions are represented as populations
 
 ## Components
 
-* __fobj__: 
+* __fobj__:
 ```python
 fobj = lambda x: sum(x**2)/len(x)
 ```
 
-* __bounds__: 
+* __bounds__:
 ```python
 bounds = [(-5, 5)] * 4
 ```
@@ -191,7 +193,7 @@ bounds = [(-5, 5)] * 4
 
 ## Initialization
 
-The first step in every evolutionary algorithm is the creation of a population with _popsize_ individuals. An individual is just an instantiation of the parameters of the function __fobj__. At the beginning, the algorithm initializes the individuals by generating random values for each parameter within the given bounds. For convenience, I generate uniform random numbers between 0 and 1, and then I scale the parameters (denormalization) to obtain the corresponding values. This is done in lines 4-8 of the algorithm. 
+The first step in every evolutionary algorithm is the creation of a population with _popsize_ individuals. An individual is just an instantiation of the parameters of the function __fobj__. At the beginning, the algorithm initializes the individuals by generating random values for each parameter within the given bounds. For convenience, I generate uniform random numbers between 0 and 1, and then I scale the parameters (denormalization) to obtain the corresponding values. This is done in lines 4-8 of the algorithm.
 
 ```python
 # Population of 10 individuals, 4 params each (popsize = 10, dimensions = 4)
@@ -371,7 +373,7 @@ Let's see now the algorithm in action with another concrete example. Given a set
 </div>
 
 
-Our goal is to fit a curve (defined by a polynomial) to the set of points that we generated before. This curve should be close to the original \\(f(x)=cos(x)\\) used to generate the points. 
+Our goal is to fit a curve (defined by a polynomial) to the set of points that we generated before. This curve should be close to the original \\(f(x)=cos(x)\\) used to generate the points.
 
 We would need a polynomial with enough degrees to generate at least 4 curves. For this purpose, a polynomial of degree 5 should be enough (you can try with more/less degrees to see what happens):
 
@@ -429,7 +431,7 @@ We obtained a solution with a _rmse_ of ~0.215. We can plot this polynomial to s
 ```python
 >>> plt.scatter(x, y)
 >>> plt.plot(x, np.cos(x), label='cos(x)')
->>> plt.plot(x, fmodel(x, [0.99677643, 0.47572443, -1.39088333, 
+>>> plt.plot(x, fmodel(x, [0.99677643, 0.47572443, -1.39088333,
 >>>                        0.50950016, -0.06498931, 0.00273167]), label='result')
 >>> plt.legend()
 ```
@@ -511,7 +513,7 @@ Mutation/crossover schemas can be combined to generate different DE variants, su
 
 # Final words
 
-Differential Evolution (DE) is a very simple but powerful algorithm for optimization of complex functions that works pretty well in those problems where other techniques (such as Gradient Descent) cannot be used. In this post, we've seen how to implement it in just 27 lines of Python with Numpy, and we've seen how the algorithm works step by step. 
+Differential Evolution (DE) is a very simple but powerful algorithm for optimization of complex functions that works pretty well in those problems where other techniques (such as Gradient Descent) cannot be used. In this post, we've seen how to implement it in just 27 lines of Python with Numpy, and we've seen how the algorithm works step by step.
 
 If you are looking for a Python library for black-box optimization that includes the Differential Evolution algorithm, here are some:
 
