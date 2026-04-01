@@ -58,6 +58,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/embl-ai-24-post/";
+            },},{id: "news-seminar-talk-at-karolinska-on-biologically-informed-neural-networks",
+          title: 'Seminar talk at Karolinska on biologically informed neural networks',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/karolinska-binn-seminar/";
             },},{
         id: 'social-email',
         title: 'email',
