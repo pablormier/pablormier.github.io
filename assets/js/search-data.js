@@ -63,6 +63,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/karolinska-binn-seminar/";
+            },},{id: "news-talk-at-the-broad-institute",
+          title: 'Talk at the Broad Institute',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/broad-mia-talk/";
             },},{
         id: 'social-email',
         title: 'email',
