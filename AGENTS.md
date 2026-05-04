@@ -24,13 +24,18 @@ This is Pablo Rodriguez-Mier's personal GitHub Pages site, built with Jekyll and
 
 ## Local Development
 
-- Prefer the Docker workflow from `INSTALL.md` and `LOCAL_DOCKER_NOTES.md`:
+- Use the Docker workflow from `INSTALL.md` and `LOCAL_DOCKER_NOTES.md`:
   `docker compose up --build`, then view the site at `http://localhost:8080`.
 - Use `docker compose up` when the image is already current.
 - The slim image is available with
   `docker compose -f docker-compose-slim.yml up`.
-- The legacy non-Docker fallback is `bundle install`, install Jupyter if needed, then
-  `bundle exec jekyll serve` and view `http://localhost:4000`.
+- Do not run host-system Ruby, Bundler, `gem`, or `bundle exec jekyll ...` as a
+  fallback when Docker is unavailable. If Docker fails because the daemon is not
+  running or the image cannot be pulled, report Docker as the verification blocker
+  and ask for Docker Desktop to be started or network access to be fixed.
+- Only use the legacy non-Docker setup (`bundle install`, Jupyter if needed, then
+  `bundle exec jekyll serve`) when the user explicitly requests host-based local
+  setup or debugging.
 - Changes to `_config.yml` require a Jekyll rebuild or server restart; most content
   edits only need a browser refresh after Jekyll rebuilds.
 
@@ -73,9 +78,10 @@ This is Pablo Rodriguez-Mier's personal GitHub Pages site, built with Jekyll and
 
 - al-folio uses Prettier for formatting. For broad formatting fixes, run
   `npx prettier . --write` after dependencies are available.
-- Before handing off non-trivial site changes, run the most relevant available check:
-  Docker serve/build for local site behavior, or `bundle exec jekyll build` if using
-  the legacy local setup.
+- Before handing off non-trivial site changes, verify with Docker
+  (`docker compose up --build`) whenever a build check is needed. If Docker is not
+  available, say so directly and do not substitute host Ruby/Bundler checks unless
+  the user asks for that fallback.
 - If upstream updates change `Gemfile.lock` or `package-lock.json`, follow
   `UPDATE.md` first, then use `LOCAL_DOCKER_NOTES.md` for Docker-specific recovery:
   rebuild Docker, regenerate needed lockfile platforms, and commit lockfile changes
