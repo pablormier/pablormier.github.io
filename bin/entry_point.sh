@@ -21,7 +21,22 @@ manage_gemfile_lock() {
 
 start_jekyll() {
     manage_gemfile_lock
-    bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling &
+    jekyll_args=(
+        serve
+        --watch
+        --port=8080
+        --host=0.0.0.0
+        --livereload
+        --incremental
+        --destination="${JEKYLL_DESTINATION:-/tmp/jekyll-site}"
+        --livereload-ignore="_site/**,.jekyll-cache/**,.sass-cache/**,.git/**,.venv/**,node_modules/**"
+    )
+
+    if [[ "${JEKYLL_FORCE_POLLING:-false}" == "true" ]]; then
+        jekyll_args+=(--force_polling)
+    fi
+
+    bundle exec jekyll "${jekyll_args[@]}" &
 }
 
 start_jekyll

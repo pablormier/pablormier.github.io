@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Building a Tiny Convex Optimization Layer from Scratch
-date: 2026-05-25
+title: Building a Tiny Convex Optimization Layer from Scratch (Part I)
+date: 2026-05-30
 description:
 categories: python optimization
 disqus_comments: true

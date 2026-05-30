@@ -20,6 +20,9 @@ services:
       - node_modules:/srv/jekyll/node_modules
     environment:
       - JEKYLL_ENV=development
+      # Set to true if Docker Desktop misses file change events.
+      - JEKYLL_FORCE_POLLING=false
+      - JEKYLL_DESTINATION=/tmp/jekyll-site
 
 volumes:
   node_modules:
