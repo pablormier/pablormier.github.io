@@ -22,6 +22,11 @@ our personal content. Upstream updates frequently change `Gemfile.lock` (and som
 - The site becomes available at http://localhost:8080 with livereload on port 35729.
 - Project files are bind-mounted into the container, so edits in the repo trigger
   Jekyll to rebuild automatically.
+- Node-based theme tools are installed inside the Docker image from `package-lock.json`
+  with `npm ci`. The compose file keeps `/srv/jekyll/node_modules` in a named volume
+  so the bind mount of the repo does not hide those installed tools. Run tools such
+  as Prettier inside the container, for example:
+  `docker compose exec jekyll npx prettier assets/js/common.js --write`.
 - Stop the container with `Ctrl+C`; restart using `docker compose up` (skip `--build`
   if the image is already current).
 
@@ -42,5 +47,8 @@ To recover:
 2. If Bundler still complains, exec into the build container and add the platforms
    manually: `docker compose run --rm jekyll bundle lock --add-platform arm64-darwin x86_64-linux`.
 3. Re-run `docker compose build` to confirm the error is gone.
-4. Commit the regenerated `Gemfile.lock` (and `package-lock.json` if it changed) so
+4. If `package-lock.json` changes, rebuild the image so the `node_modules` volume is
+   refreshed from the updated lock file. If Docker keeps using an old Node volume,
+   remove it with `docker compose down -v` before rebuilding.
+5. Commit the regenerated `Gemfile.lock` (and `package-lock.json` if it changed) so
    future builds remain reproducible on this machine.

@@ -33,6 +33,12 @@ This is Pablo Rodriguez-Mier's personal GitHub Pages site, built with Jekyll and
   fallback when Docker is unavailable. If Docker fails because the daemon is not
   running or the image cannot be pulled, report Docker as the verification blocker
   and ask for Docker Desktop to be started or network access to be fixed.
+- Do not run host-system Node package tooling (`npm`, `npx`, `yarn`, `pnpm`) for
+  site/theme tasks. Run Node-based theme tools inside the Docker service instead,
+  for example `docker compose exec jekyll npx prettier assets/js/common.js --write`
+  when the site container is already running, or
+  `docker compose run --rm jekyll npx prettier assets/js/common.js --write` for a
+  one-off command.
 - Only use the legacy non-Docker setup (`bundle install`, Jupyter if needed, then
   `bundle exec jekyll serve`) when the user explicitly requests host-based local
   setup or debugging.
@@ -103,11 +109,15 @@ This is Pablo Rodriguez-Mier's personal GitHub Pages site, built with Jekyll and
 ## Formatting and Checks
 
 - al-folio uses Prettier for formatting. For broad formatting fixes, run
-  `npx prettier . --write` after dependencies are available.
+  Prettier inside the Docker service after dependencies are available, for example
+  `docker compose exec jekyll npx prettier . --write` if the site container is
+  running, or `docker compose run --rm jekyll npx prettier . --write` for a
+  one-off formatting command. Do not run host `npx prettier ...` unless the user
+  explicitly requests host-based tooling.
 - Before handing off non-trivial site changes, verify with Docker
   (`docker compose up --build`) whenever a build check is needed. If Docker is not
-  available, say so directly and do not substitute host Ruby/Bundler checks unless
-  the user asks for that fallback.
+  available, say so directly and do not substitute host Ruby/Bundler or host
+  Node/npm checks unless the user asks for that fallback.
 - If upstream updates change `Gemfile.lock` or `package-lock.json`, follow
   `UPDATE.md` first, then use `LOCAL_DOCKER_NOTES.md` for Docker-specific recovery:
   rebuild Docker, regenerate needed lockfile platforms, and commit lockfile changes

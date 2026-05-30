@@ -29,6 +29,7 @@ RUN apt-get update -y && \
         inotify-tools \
         locales \
         nodejs \
+        npm \
         procps \
         python3-pip \
         zlib1g-dev && \
@@ -56,6 +57,8 @@ RUN mkdir /srv/jekyll
 # copy the Gemfile and Gemfile.lock to the image
 ADD Gemfile.lock /srv/jekyll
 ADD Gemfile /srv/jekyll
+ADD package-lock.json /srv/jekyll
+ADD package.json /srv/jekyll
 
 # set the working directory
 WORKDIR /srv/jekyll
@@ -63,6 +66,7 @@ WORKDIR /srv/jekyll
 # install jekyll and dependencies
 RUN gem install --no-document jekyll bundler
 RUN bundle install --no-cache
+RUN npm ci
 
 EXPOSE 8080
 
