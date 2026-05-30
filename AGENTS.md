@@ -39,6 +39,32 @@ This is Pablo Rodriguez-Mier's personal GitHub Pages site, built with Jekyll and
 - Changes to `_config.yml` require a Jekyll rebuild or server restart; most content
   edits only need a browser refresh after Jekyll rebuilds.
 
+## Notebook Blog Posts
+
+- al-folio notebook posts should use a Markdown wrapper in `_posts/` that embeds a
+  notebook stored under `assets/jupyter/` with the `jekyll-jupyter-notebook`
+  Liquid tag. Do not make `_posts/*.ipynb` posts unless the theme workflow is
+  intentionally changed.
+- Treat notebooks as pre-executed artifacts. Run and save notebook outputs locally,
+  then let Docker/Jekyll convert the saved `.ipynb` to HTML during the site build.
+  Do not rely on the Jekyll Docker build to execute notebooks.
+- Use `uv` for local notebook dependencies. This keeps a reusable local cache and is
+  sufficient for the Python-only notebooks currently used by the blog. Prefer
+  `pixi` only if a future notebook needs non-Python packages, system libraries, or
+  a more complex cross-platform environment.
+- Notebook dependency metadata lives in `pyproject.toml`. Keep shared tools such as
+  `jupyterlab`, `ipykernel`, and `nbconvert` in `[project].dependencies`; put
+  notebook- or series-specific packages in a named dependency group, for example
+  `tiny-convex-layer`.
+- After changing notebook dependencies, run `uv sync --group <group-name>` locally
+  and commit both `pyproject.toml` and `uv.lock` when `uv.lock` is created or
+  updated.
+- To edit the tiny convex layer series notebook, use:
+  `uv run --group tiny-convex-layer jupyter lab`.
+- Before handing off or committing notebook changes, execute the notebook in place
+  so outputs are stored in git:
+  `uv run --group tiny-convex-layer jupyter nbconvert --to notebook --execute assets/jupyter/tiny-convex-layer-part-1.ipynb --inplace`.
+
 ## Content Locations
 
 - Site-wide configuration: `_config.yml`.

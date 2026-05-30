@@ -32,25 +32,36 @@ $(document).ready(function () {
     });
   }
 
-  // add css to jupyter notebooks
-  const cssLink = document.createElement("link");
-  cssLink.href = "../css/jupyter.css";
-  cssLink.rel = "stylesheet";
-  cssLink.type = "text/css";
-
   let jupyterTheme = determineComputedTheme();
 
   $(".jupyter-notebook-iframe-container iframe").each(function () {
-    $(this).contents().find("head").append(cssLink);
+    const iframe = this;
+    $(iframe).attr("scrolling", "no");
+    $(iframe).css("overflow", "hidden");
 
-    if (jupyterTheme == "dark") {
-      $(this).bind("load", function () {
-        $(this).contents().find("body").attr({
+    const applyJupyterFrameStyles = () => {
+      const iframeDocument = iframe.contentWindow.document;
+      if (!iframeDocument.head.querySelector("link[data-al-folio-jupyter-css]")) {
+        const cssLink = iframeDocument.createElement("link");
+        cssLink.href = "../css/jupyter.css";
+        cssLink.rel = "stylesheet";
+        cssLink.type = "text/css";
+        cssLink.dataset.alFolioJupyterCss = "true";
+        iframeDocument.head.appendChild(cssLink);
+      }
+      iframeDocument.documentElement.style.overflow = "hidden";
+      iframeDocument.body.style.overflow = "hidden";
+
+      if (jupyterTheme == "dark") {
+        $(iframeDocument.body).attr({
           "data-jp-theme-light": "false",
           "data-jp-theme-name": "JupyterLab Dark",
         });
-      });
-    }
+      }
+    };
+
+    $(iframe).on("load", applyJupyterFrameStyles);
+    applyJupyterFrameStyles();
   });
 
   // trigger popovers

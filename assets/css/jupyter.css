@@ -381,3 +381,41 @@ body[data-jp-theme-light="false"] {
 
   @import "jupyter-monokai";
 }
+
+/* al-folio embeds notebooks in an iframe whose height is managed by the parent page.
+ * Keep the iframe itself from becoming a second scroll container, and make notebook
+ * cells align more closely with normal blog post content.
+ */
+html,
+body {
+  overflow: hidden !important;
+}
+
+body {
+  margin: 0 !important;
+}
+
+.jp-Notebook {
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+.jp-Cell {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.jp-Collapser,
+.jp-InputPrompt,
+.jp-OutputPrompt {
+  display: none !important;
+}
+
+.jp-Cell-inputArea,
+.jp-Cell-outputArea {
+  max-width: 100%;
+}
+
+.jp-RenderedHTMLCommon {
+  padding-right: 0 !important;
+}
