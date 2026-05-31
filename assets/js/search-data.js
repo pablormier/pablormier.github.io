@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-smart-invaders-can-you-beat-them",
+        },{id: "post-building-a-tiny-convex-optimization-layer-from-scratch-part-i",
+        
+          title: "Building a Tiny Convex Optimization Layer from Scratch (Part I)",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/2026/05/30/building-a-tiny-convex-optimization-layer-from-scratch/";
+          
+        },
+      },{id: "post-smart-invaders-can-you-beat-them",
         
           title: "Smart Invaders: Can You Beat Them?",
         
@@ -58,6 +69,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/embl-ai-24-post/";
+            },},{id: "news-14th-place-in-the-arc-virtual-cell-challenge",
+          title: '14th place in the Arc Virtual Cell Challenge',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/arc-virtual-cell-challenge/";
             },},{id: "news-seminar-talk-at-karolinska-on-biologically-informed-neural-networks",
           title: 'Seminar talk at Karolinska on biologically informed neural networks',
           description: "",
@@ -68,6 +84,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/broad-mia-talk/";
+            },},{id: "news-poster-accepted-at-biology-at-scale-2026",
+          title: 'Poster accepted at Biology at Scale 2026',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/wellcome-biology-at-scale-poster/";
             },},{
         id: 'social-email',
         title: 'email',

@@ -1,0 +1,15 @@
+[project]
+name = "pablormier-blog-notebooks"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "ipykernel",
+  "jupyterlab",
+  "nbconvert",
+]
+
+[dependency-groups]
+tiny-convex-layer = [
+  "matplotlib",
+  "numpy",
+]
