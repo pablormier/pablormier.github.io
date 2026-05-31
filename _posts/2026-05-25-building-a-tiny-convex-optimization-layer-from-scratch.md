@@ -8,6 +8,11 @@ disqus_comments: true
 related_posts: false
 ---
 
+> **Work in progress.** This post is an evolving draft. I am still refining the
+> presentation, notation, and references, so details may change as the
+> series develops.
+{: .block-warning}
+
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/tiny-convex-layer.ipynb' | relative_url %}
 {% capture notebook_exists %}{% file_exists assets/jupyter/tiny-convex-layer.ipynb %}{% endcapture %}
