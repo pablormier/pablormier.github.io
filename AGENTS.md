@@ -118,6 +118,11 @@ This is Pablo Rodriguez-Mier's personal GitHub Pages site, built with Jekyll and
   (`docker compose up --build`) whenever a build check is needed. If Docker is not
   available, say so directly and do not substitute host Ruby/Bundler or host
   Node/npm checks unless the user asks for that fallback.
+- Notebook rendering depends on Jupyter CSS selectors surviving production
+  PurgeCSS. Keep the `purgecss.config.js` safelist for `jp-*`, `lm-*`, `cm-*`,
+  `CodeMirror`, MathJax, and Mermaid selectors unless the notebook embedding
+  strategy changes. Deployed notebook HTML lives under `_site/assets/jupyter/`,
+  which is skipped as purge content.
 - If upstream updates change `Gemfile.lock` or `package-lock.json`, follow
   `UPDATE.md` first, then use `LOCAL_DOCKER_NOTES.md` for Docker-specific recovery:
   rebuild Docker, regenerate needed lockfile platforms, and commit lockfile changes
