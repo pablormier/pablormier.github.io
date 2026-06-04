@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Talk at the Broad Institute
+title: Invited talk at the MIA Seminar Series, Broad Institute of MIT and Harvard
 date: 2026-05-02
 inline: false
 related_posts: false
