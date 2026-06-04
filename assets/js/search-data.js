@@ -79,8 +79,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/karolinska-binn-seminar/";
-            },},{id: "news-talk-at-the-broad-institute",
-          title: 'Talk at the Broad Institute',
+            },},{id: "news-invited-talk-at-the-mia-seminar-series-broad-institute-of-mit-and-harvard",
+          title: 'Invited talk at the MIA Seminar Series, Broad Institute of MIT and Harvard...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/broad-mia-talk/";
