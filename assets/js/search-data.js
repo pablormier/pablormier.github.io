@@ -69,6 +69,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/embl-ai-24-post/";
+            },},{id: "news-corneto-published-in-nature-machine-intelligence",
+          title: 'CORNETO published in Nature Machine Intelligence',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/corneto-nature-machine-intelligence/";
             },},{id: "news-14th-place-in-the-arc-virtual-cell-challenge",
           title: '14th place in the Arc Virtual Cell Challenge',
           description: "",
