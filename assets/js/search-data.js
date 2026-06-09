@@ -31,7 +31,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/2026/05/30/building-a-tiny-convex-optimization-layer-from-scratch/";
+            window.location.href = "/2026/05/30/building-a-tiny-convex-optimization-layer-from-scratch-part-i/";
           
         },
       },{id: "post-smart-invaders-can-you-beat-them",
