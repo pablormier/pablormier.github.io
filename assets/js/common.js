@@ -87,6 +87,28 @@ $(document).ready(function () {
       }
     };
 
+    const hideTaggedJupyterInputs = (iframeDocument) => {
+      iframeDocument
+        .querySelectorAll(
+          [
+            ".jp-Cell.tag_remove-input",
+            ".jp-Cell.tag_remove_input",
+            ".jp-Cell.tag_hide-input",
+            ".jp-Cell.tag_hide_input",
+            ".jp-Cell.celltag_remove-input",
+            ".jp-Cell.celltag_remove_input",
+            ".jp-Cell.celltag_hide-input",
+            ".jp-Cell.celltag_hide_input",
+          ].join(",")
+        )
+        .forEach((cell) => {
+          const inputWrapper = cell.querySelector(".jp-Cell-inputWrapper");
+          if (inputWrapper) {
+            inputWrapper.style.display = "none";
+          }
+        });
+    };
+
     const observeJupyterFrameContent = (iframeDocument) => {
       disconnectJupyterFrameObservers();
 
@@ -101,6 +123,7 @@ $(document).ready(function () {
             resizeObserver.disconnect();
             Array.from(iframeDocument.body.children).forEach((child) => resizeObserver.observe(child));
           }
+          hideTaggedJupyterInputs(iframeDocument);
           resizeJupyterFrame();
         });
         mutationObserver.observe(iframeDocument.body, { childList: true, subtree: false });
@@ -112,6 +135,31 @@ $(document).ready(function () {
       if (!iframeDocument || !iframeDocument.head || !iframeDocument.body) {
         return;
       }
+
+      const parentStyles = window.getComputedStyle(document.documentElement);
+      [
+        "--global-bg-color",
+        "--global-code-bg-color",
+        "--global-text-color",
+        "--global-text-color-light",
+        "--global-theme-color",
+        "--global-hover-color",
+        "--global-divider-color",
+        "--global-card-bg-color",
+      ].forEach((property) => {
+        iframeDocument.documentElement.style.setProperty(property, parentStyles.getPropertyValue(property));
+      });
+
+      document.querySelectorAll('link[rel="stylesheet"][href*="fonts.googleapis.com"]').forEach((fontLink) => {
+        if (!iframeDocument.head.querySelector(`link[data-al-folio-fonts][href="${fontLink.href}"]`)) {
+          const iframeFontLink = iframeDocument.createElement("link");
+          iframeFontLink.href = fontLink.href;
+          iframeFontLink.rel = "stylesheet";
+          iframeFontLink.type = fontLink.type || "text/css";
+          iframeFontLink.dataset.alFolioFonts = "true";
+          iframeDocument.head.appendChild(iframeFontLink);
+        }
+      });
 
       if (!iframeDocument.head.querySelector("link[data-al-folio-jupyter-css]")) {
         const cssLink = iframeDocument.createElement("link");
@@ -133,6 +181,7 @@ $(document).ready(function () {
       }
 
       observeJupyterFrameContent(iframeDocument);
+      hideTaggedJupyterInputs(iframeDocument);
       resizeJupyterFrame();
       window.setTimeout(resizeJupyterFrame, 250);
     };

@@ -22,10 +22,10 @@
     *
     * The following variables, specify the visual styling of borders in JupyterLab.
     */
-  --jp-border-color0: var(--md-grey-400);
-  --jp-border-color1: var(--md-grey-400);
-  --jp-border-color2: var(--md-grey-300);
-  --jp-border-color3: var(--md-grey-200);
+  --jp-border-color0: var(--global-divider-color);
+  --jp-border-color1: var(--global-divider-color);
+  --jp-border-color2: var(--global-divider-color);
+  --jp-border-color3: var(--global-divider-color);
 
   /*
     * Use these font colors against the corresponding main layout colors.
@@ -33,10 +33,10 @@
     */
 
   /* Defaults use Material Design specification */
-  --jp-ui-font-color0: rgba(0, 0, 0, 1);
-  --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-ui-font-color0: var(--global-text-color);
+  --jp-ui-font-color1: var(--global-text-color);
+  --jp-ui-font-color2: var(--global-text-color-light);
+  --jp-ui-font-color3: var(--global-text-color-light);
 
   /*
     * Use these against the brand/accent/warn/error colors.
@@ -57,22 +57,22 @@
     */
 
   /* Defaults use Material Design specification */
-  --jp-content-font-color0: rgba(0, 0, 0, 1);
-  --jp-content-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-content-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-content-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-content-font-color0: var(--global-text-color);
+  --jp-content-font-color1: var(--global-text-color);
+  --jp-content-font-color2: var(--global-text-color-light);
+  --jp-content-font-color3: var(--global-text-color-light);
 
-  --jp-content-link-color: var(--md-blue-700);
+  --jp-content-link-color: var(--global-theme-color);
 
   /* Layout
     *
     * The following are the main layout colors use in JupyterLab. In a light
     * theme these would go from light to dark.
     */
-  --jp-layout-color0: white;
-  --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
+  --jp-layout-color0: var(--global-bg-color);
+  --jp-layout-color1: var(--global-card-bg-color);
+  --jp-layout-color2: var(--global-code-bg-color);
+  --jp-layout-color3: var(--global-divider-color);
 
   /* Inverse Layout
     *
@@ -85,8 +85,8 @@
   --jp-inverse-layout-color3: var(--md-grey-700);
 
   /* Brand/accent */
-  --jp-brand-color0: var(--md-blue-900);
-  --jp-brand-color1: var(--md-blue-700);
+  --jp-brand-color0: var(--global-theme-color);
+  --jp-brand-color1: var(--global-theme-color);
 
   --jp-accent-color0: var(--md-green-900);
   --jp-accent-color1: var(--md-green-700);
@@ -105,8 +105,8 @@
   --jp-info-color1: var(--md-cyan-700);
 
   /* Cell specific styles */
-  --jp-cell-editor-background: var(--md-grey-100);
-  --jp-cell-editor-border-color: var(--md-grey-300);
+  --jp-cell-editor-background: var(--global-code-bg-color);
+  --jp-cell-editor-border-color: var(--global-divider-color);
 
   --jp-cell-prompt-not-active-opacity: 0.5;
   --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
@@ -388,6 +388,11 @@ body[data-jp-theme-light="false"] {
  */
 html,
 body {
+  background: var(--global-bg-color) !important;
+  color: var(--global-text-color) !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 1.02rem;
+  line-height: 1.72;
   overflow: hidden !important;
 }
 
@@ -417,5 +422,66 @@ body {
 }
 
 .jp-RenderedHTMLCommon {
+  color: var(--global-text-color) !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 1.02rem !important;
+  line-height: 1.72 !important;
   padding-right: 0 !important;
+}
+
+.jp-RenderedHTMLCommon h1,
+.jp-RenderedHTMLCommon h2,
+.jp-RenderedHTMLCommon h3,
+.jp-RenderedHTMLCommon h4,
+.jp-RenderedHTMLCommon h5,
+.jp-RenderedHTMLCommon h6 {
+  color: var(--global-text-color) !important;
+  font-family: "Source Serif 4", Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+.jp-RenderedHTMLCommon h2 {
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 1.55rem !important;
+  margin-top: 2.8rem !important;
+  padding-top: 1.35rem !important;
+}
+
+.jp-RenderedHTMLCommon h3 {
+  font-size: 1.22rem !important;
+  margin-top: 2rem !important;
+}
+
+.jp-RenderedHTMLCommon p {
+  margin-bottom: 1.15rem !important;
+}
+
+.jp-RenderedHTMLCommon a {
+  color: var(--global-theme-color) !important;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+}
+
+.jp-RenderedImage,
+.jp-RenderedSVG {
+  text-align: center;
+}
+
+.jp-RenderedImage img,
+.jp-RenderedSVG svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jp-Cell.tag_remove-input .jp-Cell-inputWrapper,
+.jp-Cell.tag_remove_input .jp-Cell-inputWrapper,
+.jp-Cell.tag_hide-input .jp-Cell-inputWrapper,
+.jp-Cell.tag_hide_input .jp-Cell-inputWrapper,
+.jp-Cell.celltag_remove-input .jp-Cell-inputWrapper,
+.jp-Cell.celltag_remove_input .jp-Cell-inputWrapper,
+.jp-Cell.celltag_hide-input .jp-Cell-inputWrapper,
+.jp-Cell.celltag_hide_input .jp-Cell-inputWrapper {
+  display: none !important;
 }

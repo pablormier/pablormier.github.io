@@ -15,7 +15,7 @@ I have to admit that I'm a great fan of the Differential Evolution (DE) algorith
     <img
       src="{{ '/assets/img/de/ackley.gif' | relative_url }}"
       alt="DE iteratively optimizing the 2D Ackley function"
-      class="img-fluid rounded z-depth-0 d-block mx-auto"
+      class="img-fluid figure-framed d-block mx-auto"
       loading="lazy"
     />
   </div>
@@ -84,12 +84,12 @@ Yeah I know, this is too easy. Now, let's try the same example in a multi-dimens
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/x2.png"
-       class="img-fluid rounded z-depth-0"
+       class="img-fluid figure-framed"
     %}
   </div>
 </div>
 <div class="caption text-center">
-  <b>Figure 2.</b> Representation of \\(f(x)=\\sum x_i^2/n\\)
+  <b>Figure 2.</b> Representation of \(f(x)=\sum x_i^2/n\)
 </div>
 
 
@@ -138,7 +138,7 @@ Now we obtained a much better solution, with a value very close to 0. In this ca
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/de3000.png"
-       class="img-fluid rounded z-depth-0"
+       class="img-fluid figure-framed"
     %}
   </div>
 </div>
@@ -162,7 +162,7 @@ plt.legend()
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/comp_de3000.png"
-       class="img-fluid rounded z-depth-0"
+       class="img-fluid figure-framed"
     %}
   </div>
 </div>
@@ -364,12 +364,12 @@ Let's see now the algorithm in action with another concrete example. Given a set
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/curve.png"
-       class="img-fluid rounded z-depth-0"
+       class="img-fluid figure-framed"
     %}
   </div>
 </div>
 <div class="caption text-center">
-  <b>Figure 5.</b> Dataset of 2D points (x, y) generated using the function \\(y=cos(x)\\) with gaussian noise.
+  <b>Figure 5.</b> Dataset of 2D points (x, y) generated using the function \(y=cos(x)\) with gaussian noise.
 </div>
 
 
@@ -397,7 +397,7 @@ Using this expression, we can generate an infinite set of possible curves. For e
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/curve-example.png"
-       class="img-fluid rounded z-depth-0"
+       class="img-fluid figure-framed"
     %}
   </div>
 </div>
@@ -441,12 +441,12 @@ We obtained a solution with a _rmse_ of ~0.215. We can plot this polynomial to s
     {% include figure.liquid
        loading="lazy"
        path="assets/img/de/approximation.png"
-       class="img-fluid rounded z-depth-0"
+       class="img-fluid figure-framed"
     %}
   </div>
 </div>
 <div class="caption text-center">
-  <b>Figure 7.</b> Approximation of the original function \\(f(x)=cos(x)\\) used to generate the data points, after 2000 iterations with DE.
+  <b>Figure 7.</b> Approximation of the original function \(f(x)=cos(x)\) used to generate the data points, after 2000 iterations with DE.
 </div>
 
 
