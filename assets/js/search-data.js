@@ -34,7 +34,7 @@ ninja.data = [{
         
           title: "Building a Tiny Convex Optimization Layer from Scratch (Part I)",
         
-        description: "",
+        description: "Part I of a from-scratch convex optimization layer series, deriving the Lagrangian and KKT system for a constrained projection problem.",
         section: "Posts",
         handler: () => {
           
@@ -56,7 +56,7 @@ ninja.data = [{
         
           title: "Smart Invaders: Can You Beat Them?",
         
-        description: "",
+        description: "A browser game for introducing genetic algorithms, where evolving Space Invaders-style enemies adapt to the player&#39;s strategy over time.",
         section: "Posts",
         handler: () => {
           
@@ -67,7 +67,7 @@ ninja.data = [{
         
           title: "A tutorial on Differential Evolution with Python",
         
-        description: "an example of a blog post with disqus comments",
+        description: "A hands-on Python introduction to Differential Evolution for black-box optimization, from a compact NumPy implementation to practical examples.",
         section: "Posts",
         handler: () => {
           
