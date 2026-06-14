@@ -2,7 +2,7 @@
 layout: post
 title: A tutorial on Differential Evolution with Python
 date: 2017-09-05
-description: an example of a blog post with disqus comments
+description: A hands-on Python introduction to Differential Evolution for black-box optimization, from a compact NumPy implementation to practical examples.
 categories: python optimization
 disqus_comments: true
 related_posts: false

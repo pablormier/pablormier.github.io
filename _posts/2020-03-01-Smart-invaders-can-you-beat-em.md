@@ -2,7 +2,7 @@
 layout: post
 title: 'Smart Invaders: Can You Beat Them?'
 date: 2020-03-01
-description:
+description: A browser game for introducing genetic algorithms, where evolving Space Invaders-style enemies adapt to the player's strategy over time.
 categories: artificial-intelligence
 disqus_comments: true
 related_posts: false
