@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-news",
+          title: "news",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
         },{id: "post-building-a-tiny-convex-optimization-layer-from-scratch-part-i",
         
           title: "Building a Tiny Convex Optimization Layer from Scratch (Part I)",
@@ -32,6 +39,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/2026/05/30/building-a-tiny-convex-optimization-layer-from-scratch-part-i/";
+          
+        },
+      },{id: "post-making-graphviz-easier-to-use-from-python",
+        
+          title: "Making Graphviz easier to use from Python",
+        
+        description: "A short note on wasi-graphviz, easydot, and using LLMs to get through portability work.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/2026/05/17/making-graphviz-easier-to-use-from-python/";
           
         },
       },{id: "post-smart-invaders-can-you-beat-them",
