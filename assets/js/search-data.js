@@ -112,6 +112,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/wellcome-biology-at-scale-poster/";
+            },},{id: "news-boston-visit-and-mia-seminar-at-the-broad-institute",
+          title: 'Boston visit and MIA Seminar at the Broad Institute',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/boston-mia-visit/";
             },},{
         id: 'social-email',
         title: 'email',
