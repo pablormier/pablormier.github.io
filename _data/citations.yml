@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-05'
+  last_updated: '2026-06-17'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -22,7 +22,7 @@ papers:
     title: An Optimal and Complete Algorithm for Automatic Web Service Composition
     year: '2012'
   o8v__F8AAAAJ:CHSYGLWDkRkC:
-    citations: 8
+    citations: 9
     title: Evaluating signaling pathway inference from kinase-substrate interactions and phosphoproteomics data
     year: '2024'
   o8v__F8AAAAJ:D03iK_w7-QYC:
@@ -82,7 +82,7 @@ papers:
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 228
+    citations: 241
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -98,11 +98,11 @@ papers:
     title: 'NetworkCommons: bridging data, knowledge, and methods to build and evaluate context-specific biological networks'
     year: '2025'
   o8v__F8AAAAJ:g5m5HwL7SMYC:
-    citations: 17
+    citations: 18
     title: 'DEXOM: Diversity-based enumeration of optimal context-specific metabolic networks'
     year: '2021'
   o8v__F8AAAAJ:hMod-77fHWUC:
-    citations: 241
+    citations: 242
     title: An Integrated Semantic Web Service Discovery and Composition Framework
     year: '2015'
   o8v__F8AAAAJ:lSLTfruPkqcC:
@@ -122,7 +122,7 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 210
+    citations: 217
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
