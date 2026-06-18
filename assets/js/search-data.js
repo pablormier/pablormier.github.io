@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "blog",
-          description: "",
+          description: "Blog posts by Pablo Rodriguez-Mier on computational biomedicine, optimization, Python, and scientific software.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-news",
           title: "news",
-          description: "",
+          description: "News, talks, awards, and research updates from Pablo Rodriguez-Mier.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/news/";
