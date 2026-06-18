@@ -85,6 +85,19 @@ footer.fixed-bottom {
   margin-bottom: 1.15rem;
 }
 
+#markdown-content {
+  .rendered_html img,
+  .output_png img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .output_subarea {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
 .post article h2,
 #markdown-content h2 {
   border-top: 1px solid var(--global-divider-color);

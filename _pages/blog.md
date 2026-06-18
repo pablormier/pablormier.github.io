@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: Blog posts by Pablo Rodriguez-Mier on computational biomedicine, optimization, Python, and scientific software.
 nav: true
 nav_order: 1
 pagination:
