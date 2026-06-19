@@ -484,11 +484,12 @@ The schema used in this version of the algorithm is called _rand/1/bin_ because 
 
 ## Mutation schemas
 
-- **Rand/1**: \\(x*{mut} = x*{r1} + F(x*{r2} - x*{r3})\\)
-- **Rand/2**: \\(x*{mut} = x*{r1} + F(x*{r2} - x*{r3} + x*{r4} - x*{r5})\\)
-- **Best/1**: \\(x*{mut} = x*{best} + F(x*{r2} - x*{r3})\\)
-- **Best/2**: \\(x*{mut} = x*{best} + F(x*{r2} - x*{r3} + x*{r4} - x*{r5})\\)
-- **Rand-to-best/1**: \\(x*{mut} = x*{r1} + F*1(x*{r2} - x*{r3}) + F_2(x*{best} - x\_{r1})\\)
+<!-- prettier-ignore -->
+- **Rand/1**: \\(x_{mut} = x_{r1} + F(x_{r2} - x_{r3})\\)
+- **Rand/2**: \\(x_{mut} = x_{r1} + F(x_{r2} - x_{r3} + x_{r4} - x_{r5})\\)
+- **Best/1**: \\(x_{mut} = x_{best} + F(x_{r2} - x_{r3})\\)
+- **Best/2**: \\(x_{mut} = x_{best} + F(x_{r2} - x_{r3} + x_{r4} - x_{r5})\\)
+- **Rand-to-best/1**: \\(x_{mut} = x_{r1} + F_1(x_{r2} - x_{r3}) + F_2(x_{best} - x_{r1})\\)
 - ...
 
 ## Crossover schemas
