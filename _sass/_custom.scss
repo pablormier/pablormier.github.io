@@ -96,12 +96,24 @@ footer.fixed-bottom {
   .output_subarea {
     box-sizing: border-box;
     max-width: 100%;
+    min-width: 0;
   }
 
   .input_area,
   .output_area,
-  .output_subarea {
+  .output_subarea,
+  .rendered_html p:has(mjx-container[display="true"]) {
     overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  mjx-container[jax="CHTML"][display="true"] {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.1rem;
   }
 
   .rendered_html img,
