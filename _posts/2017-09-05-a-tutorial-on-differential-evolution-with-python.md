@@ -91,7 +91,7 @@ Yeah I know, this is too easy. Now, let's try the same example in a multi-dimens
 </div>
 
 ```python
->>> result = list(de(lambda x: x**2 / len(x), bounds=[(-100, 100)] * 32))
+>>> result = list(de(lambda x: sum(x**2) / len(x), bounds=[(-100, 100)] * 32))
 >>> print(result[-1])
 
 (array([ 1.43231366,  4.83555112,  0.29051824,  2.94836318,  2.02918578,
@@ -108,7 +108,7 @@ This time the best value for `f(x)` was `6.346`, we didn't obtain the optimal so
 Knowing this, let's run again the algorithm but for 3,000 iterations instead of just 1,000:
 
 ```python
->>> result = list(de(lambda x: x**2 / len(x), bounds=[(-100, 100)] * 32, its=3000))
+>>> result = list(de(lambda x: sum(x**2) / len(x), bounds=[(-100, 100)] * 32, its=3000))
 >>> print(result[-1])
 
 (array([ 0.00648831, -0.00093694, -0.00205017,  0.00136862, -0.00722833,
