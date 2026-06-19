@@ -86,15 +86,31 @@ footer.fixed-bottom {
 }
 
 #markdown-content {
-  .rendered_html img,
-  .output_png img {
+  .cell,
+  .inner_cell,
+  .input,
+  .input_area,
+  .output,
+  .output_area,
+  .output_wrapper,
+  .output_subarea {
+    box-sizing: border-box;
     max-width: 100%;
-    height: auto;
   }
 
+  .input_area,
+  .output_area,
   .output_subarea {
-    max-width: 100%;
     overflow-x: auto;
+  }
+
+  .rendered_html img,
+  .output_png img {
+    display: block;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
