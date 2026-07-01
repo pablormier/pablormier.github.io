@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-17'
+  last_updated: '2026-07-01'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -74,15 +74,15 @@ papers:
     title: Hybrid optimization algorithm for large-scale QoS-aware service composition
     year: '2015'
   o8v__F8AAAAJ:_xSYboBqXhAC:
-    citations: 28
+    citations: 30
     title: Molecular causality in the advent of foundation models
     year: '2024'
   o8v__F8AAAAJ:a0OBvERweLwC:
-    citations: 12
+    citations: 13
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 241
+    citations: 249
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -102,7 +102,7 @@ papers:
     title: 'DEXOM: Diversity-based enumeration of optimal context-specific metabolic networks'
     year: '2021'
   o8v__F8AAAAJ:hMod-77fHWUC:
-    citations: 242
+    citations: 241
     title: An Integrated Semantic Web Service Discovery and Composition Framework
     year: '2015'
   o8v__F8AAAAJ:lSLTfruPkqcC:
@@ -114,7 +114,7 @@ papers:
     title: 139P Rewiring of cis-regulatory and kinase signalling networks in acalabrutinib-resistant ABC DLBCL cells
     year: '2024'
   o8v__F8AAAAJ:ns9cj8rnVeAC:
-    citations: 3
+    citations: 4
     title: Scalable modeling of thermal dynamics in buildings using fuzzy rules for regression
     year: '2017'
   o8v__F8AAAAJ:p2g8aNsByqUC:
@@ -122,7 +122,7 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 217
+    citations: 221
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
@@ -138,11 +138,11 @@ papers:
     title: Automatic web service composition with a heuristic-based search algorithm
     year: '2011'
   o8v__F8AAAAJ:u9iWguZQMMsC:
-    citations: 0
+    citations: 1
     title: 'ScAPE: A lightweight multitask learning baseline method to predict transcriptomic responses to perturbations'
     year: '2025'
   o8v__F8AAAAJ:uWQEDVKXjbEC:
-    citations: 13
+    citations: 15
     title: Unifying multi-sample network inference from prior knowledge and omics data with CORNETO
     year: '2025'
   o8v__F8AAAAJ:vRqMK49ujn8C:
@@ -154,6 +154,6 @@ papers:
     title: 'COVID-19: estimating spread in Spain solving an inverse problem with a probabilistic model'
     year: '2020'
   o8v__F8AAAAJ:zA6iFVUQeVQC:
-    citations: 11
+    citations: 13
     title: Avoiding the misuse of pathway analysis tools in environmental metabolomics
     year: '2022'
