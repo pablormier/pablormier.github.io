@@ -2,6 +2,7 @@
 layout: post
 title: Building a Tiny Convex Optimization Layer from Scratch (Part I)
 date: 2026-05-30
+last_modified_at: 2026-06-18
 description: Part I of a from-scratch convex optimization layer series, deriving the Lagrangian and KKT system for a constrained projection problem.
 categories: python optimization
 read_time: 21

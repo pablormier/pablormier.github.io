@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% if page.redirect_to contains '://' %}
+      {% assign redirect_url = page.redirect_to %}
+    {% else %}
+      {% assign redirect_url = page.redirect_to | absolute_url %}
+    {% endif %}
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+    <link rel="canonical" href="{{ redirect_url }}">
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ redirect_url }}">{{ redirect_url }}</a>.</p>
+  </body>
+</html>

@@ -48,6 +48,7 @@
 {% if page.collection == 'posts' %}
   {% assign is_blog_post = true %}
 {% endif %}
+{% assign modified_date = page.last_modified_at | default: page.date %}
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
@@ -56,6 +57,10 @@
   <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if is_blog_post %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:modified_time" content="{{ modified_date | date_to_xmlschema }}">
+  {% endif %}
   {% if page.og_image or site.og_image %}
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
   {% endif %}
@@ -235,6 +240,14 @@
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
         "description": "{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}",
         "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        {% if is_blog_post %}
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        "dateModified": {{ modified_date | date_to_xmlschema | jsonify }},
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+        },
+        {% endif %}
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
