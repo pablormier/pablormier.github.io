@@ -117,6 +117,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/boston-mia-visit/";
+            },},{id: "news-final-decider-eu-project-meeting-in-copenhagen",
+          title: 'Final DECIDER EU project meeting in Copenhagen',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/final-decider-meeting-copenhagen/";
             },},{
         id: 'social-email',
         title: 'email',
