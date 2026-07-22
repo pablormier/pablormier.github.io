@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-22'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -26,7 +26,7 @@ papers:
     title: Evaluating signaling pathway inference from kinase-substrate interactions and phosphoproteomics data
     year: '2024'
   o8v__F8AAAAJ:D03iK_w7-QYC:
-    citations: 40
+    citations: 41
     title: 'LIANA+: an all-in-one cell-cell communication framework'
     year: '2023'
   o8v__F8AAAAJ:HoB7MX3m0LUC:
@@ -39,14 +39,14 @@ papers:
     year: '2020'
   o8v__F8AAAAJ:K3LRdlH-MEoC:
     citations: 0
-    title: Multi-Modal Data Integration Reveals Functionally Credible Predictive Biomarkers in Ovarian Cancer
+    title: Multi-modal data integration reveals functionally credible predictive biomarkers in ovarian cancer
     year: '2026'
   o8v__F8AAAAJ:NMxIlDl6LWMC:
     citations: 12
     title: A hybrid local-global optimization strategy for QoS-aware service composition
     year: '2015'
   o8v__F8AAAAJ:NaGl4SEjCO4C:
-    citations: 29
+    citations: 30
     title: Feature selection and evolutionary rule learning for Big Data in smart building energy management
     year: '2019'
   o8v__F8AAAAJ:O3NaXMp0MMsC:
@@ -66,7 +66,7 @@ papers:
     title: Prediction of indoor temperatures for energy optimization in buildings
     year: '2016'
   o8v__F8AAAAJ:WbkHhVStYXYC:
-    citations: 1
+    citations: 2
     title: Benchmarking EGF signaling pathway inference using phosphoproteomics and kinase-substrate interactions
     year: '2026'
   o8v__F8AAAAJ:YFjsv_pBGBYC:
@@ -78,11 +78,11 @@ papers:
     title: Molecular causality in the advent of foundation models
     year: '2024'
   o8v__F8AAAAJ:a0OBvERweLwC:
-    citations: 13
+    citations: 15
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 249
+    citations: 264
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -94,7 +94,7 @@ papers:
     title: 'Hipster: An open source java library for heuristic search'
     year: '2014'
   o8v__F8AAAAJ:dshw04ExmUIC:
-    citations: 4
+    citations: 5
     title: 'NetworkCommons: bridging data, knowledge, and methods to build and evaluate context-specific biological networks'
     year: '2025'
   o8v__F8AAAAJ:g5m5HwL7SMYC:
@@ -122,7 +122,7 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 221
+    citations: 225
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
@@ -142,7 +142,7 @@ papers:
     title: 'ScAPE: A lightweight multitask learning baseline method to predict transcriptomic responses to perturbations'
     year: '2025'
   o8v__F8AAAAJ:uWQEDVKXjbEC:
-    citations: 15
+    citations: 18
     title: Unifying multi-sample network inference from prior knowledge and omics data with CORNETO
     year: '2025'
   o8v__F8AAAAJ:vRqMK49ujn8C:
