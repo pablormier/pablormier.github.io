@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-22'
+  last_updated: '2026-07-27'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -34,7 +34,7 @@ papers:
     title: 'COVID-19: Estimation of the transmission dynamics in Spain using a stochastic simulator and black-box optimization techniques'
     year: '2021'
   o8v__F8AAAAJ:J_g5lzvAfSwC:
-    citations: 8
+    citations: 7
     title: Robustness assessment in computer-assisted liquid chromatography procedures based on desirability functions
     year: '2020'
   o8v__F8AAAAJ:K3LRdlH-MEoC:
@@ -82,7 +82,7 @@ papers:
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 264
+    citations: 267
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -122,7 +122,7 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 225
+    citations: 229
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
@@ -142,7 +142,7 @@ papers:
     title: 'ScAPE: A lightweight multitask learning baseline method to predict transcriptomic responses to perturbations'
     year: '2025'
   o8v__F8AAAAJ:uWQEDVKXjbEC:
-    citations: 18
+    citations: 20
     title: Unifying multi-sample network inference from prior knowledge and omics data with CORNETO
     year: '2025'
   o8v__F8AAAAJ:vRqMK49ujn8C:
