@@ -2,6 +2,7 @@
 layout: post
 title: A tutorial on Differential Evolution with Python
 date: 2017-09-05
+last_modified_at: 2026-07-29
 description: A hands-on Python introduction to Differential Evolution for black-box optimization, from a compact NumPy implementation to practical examples.
 categories: python optimization
 disqus_comments: true
@@ -502,6 +503,8 @@ Mutation/crossover schemas can be combined to generate different DE variants, su
 # Final words
 
 Differential Evolution (DE) is a very simple but powerful algorithm for optimization of complex functions that works pretty well in those problems where other techniques (such as Gradient Descent) cannot be used. In this post, we've seen how to implement it in just 27 lines of Python with Numpy, and we've seen how the algorithm works step by step.
+
+If you are interested in another hands-on optimization tutorial, I have also written [Building a Tiny Convex Optimization Layer from Scratch]({% post_url 2026-05-30-building-a-tiny-convex-optimization-layer-from-scratch-part-i %}), covering constrained optimization, Lagrangians, and KKT conditions from first principles.
 
 If you are looking for a Python library for black-box optimization that includes the Differential Evolution algorithm, here are some:
 

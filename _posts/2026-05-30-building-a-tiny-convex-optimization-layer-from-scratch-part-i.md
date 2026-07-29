@@ -2,7 +2,7 @@
 layout: post
 title: Building a Tiny Convex Optimization Layer from Scratch (Part I)
 date: 2026-05-30
-last_modified_at: 2026-06-18
+last_modified_at: 2026-07-29
 description: Part I of a from-scratch convex optimization layer series, deriving the Lagrangian and KKT system for a constrained projection problem.
 categories: python optimization
 read_time: 21
@@ -23,3 +23,8 @@ related_posts: false
   <p>Sorry, the notebook you are looking for does not exist.</p>
 {% endif %}
 {:/nomarkdown}
+
+## Other optimization tutorials
+
+For a complementary, derivative-free perspective, see my hands-on tutorial
+[A tutorial on Differential Evolution with Python]({% post_url 2017-09-05-a-tutorial-on-differential-evolution-with-python %}).

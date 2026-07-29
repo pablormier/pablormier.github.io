@@ -173,6 +173,7 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - AGENTS.md
+  - assets/jupyter/tiny-convex-layer-01.ipynb
   - bin/
   - LOCAL_DOCKER_NOTES.md
   - CONTRIBUTING.md
