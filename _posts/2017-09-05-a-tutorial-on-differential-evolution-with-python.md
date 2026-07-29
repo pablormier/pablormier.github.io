@@ -504,8 +504,6 @@ Mutation/crossover schemas can be combined to generate different DE variants, su
 
 Differential Evolution (DE) is a very simple but powerful algorithm for optimization of complex functions that works pretty well in those problems where other techniques (such as Gradient Descent) cannot be used. In this post, we've seen how to implement it in just 27 lines of Python with Numpy, and we've seen how the algorithm works step by step.
 
-If you are interested in another hands-on optimization tutorial, I have also written [Building a Tiny Convex Optimization Layer from Scratch]({% post_url 2026-05-30-building-a-tiny-convex-optimization-layer-from-scratch-part-i %}), covering constrained optimization, Lagrangians, and KKT conditions from first principles.
-
 If you are looking for a Python library for black-box optimization that includes the Differential Evolution algorithm, here are some:
 
 - [Yabox](https://github.com/pablormier/yabox). Yet another black-box optimization library for Python 3+. This is a project I've started recently, and it's the library I've used to generate the figures you've seen in this post. Yabox is a very lightweight library that depends only on Numpy.
@@ -515,3 +513,7 @@ If you are looking for a Python library for black-box optimization that includes
 - [Platypus](https://github.com/Project-Platypus/Platypus). Platypus is a framework for evolutionary computing in Python with a focus on multiobjective evolutionary algorithms (MOEAs). It differs from existing optimization libraries, including PyGMO, Inspyred, DEAP, and Scipy, by providing optimization algorithms and analysis tools for multiobjective optimization
 
 - [Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.differential_evolution.html). The well known scientific library for Python includes a fast implementation of the Differential Evolution algorithm.
+
+# Related tutorials
+
+- [Building a Tiny Convex Optimization Layer from Scratch]({% post_url 2026-05-30-building-a-tiny-convex-optimization-layer-from-scratch-part-i %}) — a from-first-principles guide to constrained optimization, Lagrangians, and KKT conditions.
