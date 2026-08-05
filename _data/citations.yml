@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-27'
+  last_updated: '2026-08-05'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -18,7 +18,7 @@ papers:
     title: 'Towards useful and private synthetic omics: Community benchmarking of generative models for transcriptomics data'
     year: '2026'
   o8v__F8AAAAJ:9yKSN-GCB0IC:
-    citations: 48
+    citations: 46
     title: An Optimal and Complete Algorithm for Automatic Web Service Composition
     year: '2012'
   o8v__F8AAAAJ:CHSYGLWDkRkC:
@@ -55,10 +55,10 @@ papers:
     year: '2016'
   o8v__F8AAAAJ:OU6Ihb5iCvQC:
     citations: 5
-    title: A tutorial on Differential Evolution with Python
+    title: A tutorial on differential evolution with python
     year: '2017'
   o8v__F8AAAAJ:RGFaLdJalmkC:
-    citations: 20
+    citations: 21
     title: Significant wave height and energy flux estimation with a Genetic Fuzzy System for regression
     year: '2018'
   o8v__F8AAAAJ:RYcK_YlVTxYC:
@@ -70,7 +70,7 @@ papers:
     title: Benchmarking EGF signaling pathway inference using phosphoproteomics and kinase-substrate interactions
     year: '2026'
   o8v__F8AAAAJ:YFjsv_pBGBYC:
-    citations: 83
+    citations: 82
     title: Hybrid optimization algorithm for large-scale QoS-aware service composition
     year: '2015'
   o8v__F8AAAAJ:_xSYboBqXhAC:
@@ -82,7 +82,7 @@ papers:
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 267
+    citations: 270
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -94,15 +94,15 @@ papers:
     title: 'Hipster: An open source java library for heuristic search'
     year: '2014'
   o8v__F8AAAAJ:dshw04ExmUIC:
-    citations: 5
+    citations: 6
     title: 'NetworkCommons: bridging data, knowledge, and methods to build and evaluate context-specific biological networks'
     year: '2025'
   o8v__F8AAAAJ:g5m5HwL7SMYC:
-    citations: 18
+    citations: 17
     title: 'DEXOM: Diversity-based enumeration of optimal context-specific metabolic networks'
     year: '2021'
   o8v__F8AAAAJ:hMod-77fHWUC:
-    citations: 241
+    citations: 220
     title: An Integrated Semantic Web Service Discovery and Composition Framework
     year: '2015'
   o8v__F8AAAAJ:lSLTfruPkqcC:
@@ -122,19 +122,19 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 229
+    citations: 227
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
-    citations: 1
+    citations: 2
     title: Suggesting disease associations for overlooked metabolites using literature from metabolic neighbors
     year: '2023'
   o8v__F8AAAAJ:u-x6o8ySG0sC:
-    citations: 71
+    citations: 72
     title: Composition of web services through genetic programming
     year: '2010'
   o8v__F8AAAAJ:u5HHmVD_uO8C:
-    citations: 138
+    citations: 134
     title: Automatic web service composition with a heuristic-based search algorithm
     year: '2011'
   o8v__F8AAAAJ:u9iWguZQMMsC:
@@ -142,7 +142,7 @@ papers:
     title: 'ScAPE: A lightweight multitask learning baseline method to predict transcriptomic responses to perturbations'
     year: '2025'
   o8v__F8AAAAJ:uWQEDVKXjbEC:
-    citations: 20
+    citations: 21
     title: Unifying multi-sample network inference from prior knowledge and omics data with CORNETO
     year: '2025'
   o8v__F8AAAAJ:vRqMK49ujn8C:
@@ -150,10 +150,10 @@ papers:
     title: Leveraging training expertise to build capacity in computational personalised medicine
     year: '2026'
   o8v__F8AAAAJ:vV6vV6tmYwMC:
-    citations: 6
+    citations: 7
     title: 'COVID-19: estimating spread in Spain solving an inverse problem with a probabilistic model'
     year: '2020'
   o8v__F8AAAAJ:zA6iFVUQeVQC:
-    citations: 13
+    citations: 12
     title: Avoiding the misuse of pathway analysis tools in environmental metabolomics
     year: '2022'
