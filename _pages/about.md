@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: #Research scientist at the <a href='#'>Institute for Computational Biology</a> (Saez-Rodriguez group). Heidelberg University.
+subtitle: Staff in the <a href='https://www.ebi.ac.uk/research/saez/'>Saez-Rodriguez group</a> at EMBL-EBI.
 
 profile:
   align: left
@@ -27,6 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a research scientist at [Saez-Rodriguez group](https://saezlab.org/) (Institute for Computational Biomedicine, Heidelberg University) where I am currently working on biological network inference. I am interested in deciphering how complex biological systems behave under different conditions through mechanistic and computational models that integrate both prior biological knowledge and experimental data.
+I am staff in the [Saez-Rodriguez group](https://saezlab.org/) at EMBL-EBI, where I work on biological network inference. My research focuses on deciphering how complex biological systems behave under different conditions through mechanistic and computational models that integrate prior biological knowledge with experimental data.
 
-Prior to that, I was a postdoctoral researcher in Computational Systems Biology at [INRAE Toxalim](https://sites.google.com/site/fabienjourdan) (Toulouse, France), where I was working on computational models to understand and predict the metabolic deregulation of cancer cells due to mutations in the TP53 gene.
+Prior to joining EMBL-EBI, I was a postdoctoral researcher in the same group at Heidelberg University (Institute for Computational Biomedicine). Previously, I was a postdoctoral researcher in Computational Systems Biology at INRAE Toxalim (Toulouse, France), developing computational models to understand and predict the metabolic deregulation of cancer cells driven by *TP53* mutations.
