@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-19'
+  last_updated: '2026-08-21'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -82,7 +82,7 @@ papers:
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 284
+    citations: 285
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -122,7 +122,7 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 231
+    citations: 232
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
@@ -154,6 +154,6 @@ papers:
     title: 'COVID-19: estimating spread in Spain solving an inverse problem with a probabilistic model'
     year: '2020'
   o8v__F8AAAAJ:zA6iFVUQeVQC:
-    citations: 12
+    citations: 13
     title: Avoiding the misuse of pathway analysis tools in environmental metabolomics
     year: '2022'
