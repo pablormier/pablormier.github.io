@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-21'
+  last_updated: '2026-08-28'
 papers:
   o8v__F8AAAAJ:1sJd4Hv_s6UC:
     citations: 2
@@ -66,7 +66,7 @@ papers:
     title: Prediction of indoor temperatures for energy optimization in buildings
     year: '2016'
   o8v__F8AAAAJ:WbkHhVStYXYC:
-    citations: 3
+    citations: 4
     title: Benchmarking EGF signaling pathway inference using phosphoproteomics and kinase-substrate interactions
     year: '2026'
   o8v__F8AAAAJ:YFjsv_pBGBYC:
@@ -74,7 +74,7 @@ papers:
     title: Hybrid optimization algorithm for large-scale QoS-aware service composition
     year: '2015'
   o8v__F8AAAAJ:_xSYboBqXhAC:
-    citations: 31
+    citations: 32
     title: Molecular causality in the advent of foundation models
     year: '2024'
   o8v__F8AAAAJ:a0OBvERweLwC:
@@ -82,7 +82,7 @@ papers:
     title: Genome scale metabolic network modelling for metabolic profile predictions
     year: '2024'
   o8v__F8AAAAJ:abG-DnoFyZgC:
-    citations: 285
+    citations: 290
     title: "LIANA+ provides an all-in-one framework for cell\u2013cell communication inference"
     year: '2024'
   o8v__F8AAAAJ:bFI3QPDXJZMC:
@@ -102,7 +102,7 @@ papers:
     title: 'DEXOM: Diversity-based enumeration of optimal context-specific metabolic networks'
     year: '2021'
   o8v__F8AAAAJ:hMod-77fHWUC:
-    citations: 220
+    citations: 222
     title: An Integrated Semantic Web Service Discovery and Composition Framework
     year: '2015'
   o8v__F8AAAAJ:lSLTfruPkqcC:
@@ -122,7 +122,7 @@ papers:
     title: Improving prediction of essential genes using context-specific metabolic network ensembles
     year: '2020'
   o8v__F8AAAAJ:pqnbT2bcN3wC:
-    citations: 232
+    citations: 233
     title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
     year: '2021'
   o8v__F8AAAAJ:rO6llkc54NcC:
@@ -142,7 +142,7 @@ papers:
     title: 'ScAPE: A lightweight multitask learning baseline method to predict transcriptomic responses to perturbations'
     year: '2025'
   o8v__F8AAAAJ:uWQEDVKXjbEC:
-    citations: 22
+    citations: 23
     title: Unifying multi-sample network inference from prior knowledge and omics data with CORNETO
     year: '2025'
   o8v__F8AAAAJ:vRqMK49ujn8C:
