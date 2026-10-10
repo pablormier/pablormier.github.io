@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Staff in the <a href='https://www.ebi.ac.uk/research/saez/'>Saez-Rodriguez group</a> at EMBL-EBI.
 
 profile:
   align: left
