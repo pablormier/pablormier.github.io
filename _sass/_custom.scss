@@ -257,6 +257,17 @@ footer.fixed-bottom {
   transform: none;
 }
 
+// Cambridge photo grid: crop portrait photos evenly from top and bottom
+.cam-crop {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pswp-gallery a {
+  display: block;
+}
+
 .figure-framed {
   background: #fffdf8;
   border: 1px solid rgba(37, 34, 30, 0.14);

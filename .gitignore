@@ -1,14 +1,49 @@
-_site
-.bundle
-.sass-cache
-.jekyll-cache
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-.DS_store
+.tweet-cache/
+
+# Ruby
+.bundle/
+vendor/
 .ruby-version
-.tweet-cache
-Gemfile.lock
-assets/libs/
+
+# Node
 node_modules/
-vendor
-.idea
-.venv
+assets/libs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.eggs/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+.backup/
+*.backup/
+*.bak
+*~
