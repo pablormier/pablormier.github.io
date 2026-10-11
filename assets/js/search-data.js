@@ -122,6 +122,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/final-decider-meeting-copenhagen/";
+            },},{id: "news-i-moved-to-cambridge",
+          title: 'I moved to Cambridge',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/moved-to-cambridge/";
             },},{
         id: 'social-email',
         title: 'email',
